@@ -33,7 +33,7 @@
         
           <p>{{ site.description.version1 | default: site.github.project_tagline }}</p>
 
-          <select name="selectedVersion">
+          <select id="selectedVersion">
             <option value="version1">version 1</option>
             <option value="version2" selected>version 2</option>
           </select>
@@ -61,9 +61,17 @@
         gtag('js', new Date());
         gtag('config', '{{ site.google_analytics }}');
 
-        let selectedVersion = document.getElementsByName("selectedVersion")[0].value;
-        console.log(selectedVersion)
+        window.onload = function() {
+          let selectedVersion = document.getElementById("selectedVersion");
+          selectedVersion.onchange = onChangeSelectedVersion;
+        }
 
+        function onChangeSelectedVersion() {
+          let changedVersion = selectedVersion.value
+          console.log(changedVersion)
+
+
+        } 
       </script>
     {% endif %}
   </body>
