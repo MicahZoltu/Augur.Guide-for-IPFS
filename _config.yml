@@ -3,7 +3,6 @@ title: Augur.Guide
 logo: https://augur.guide/assets/images/Augur.Guide-Logo-96x96.png
 show_downloads: false
 google_analytics: UA-12186523-5
-version1:
-  description: A friendly user guide to the prediction market protocol owned and operated by the people that use it.
-version2:
-  description: description2 test test test.
+description:
+  version1: A friendly user guide to the prediction market protocol owned and operated by the people that use it.
+  version2: description2 test test test.
