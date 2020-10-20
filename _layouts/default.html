@@ -32,14 +32,12 @@
           <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         
           <p>{{ site.description.version1 | default: site.github.project_tagline }}</p>
-          <div id="selectVersion">
-            <select name="example">
-              <option value="version1">version 1</option>
-              <option value="version2">version 2</option>
-            </select>
-          </div>
-        </div>  
 
+          <select name="selectedVersion">
+            <option value="version1">version 1</option>
+            <option value="version2" selected>version 2</option>
+          </select>
+        </div>  
 
         <div id="navcontainer">
           {% include navigation.html max_depth=2 %}
@@ -62,6 +60,10 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', '{{ site.google_analytics }}');
+
+        let selectedVersion = getElementByName("selectedVersion")[0].value;
+        console.log(selectedVersion)
+
       </script>
     {% endif %}
   </body>
