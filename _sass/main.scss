@@ -25,8 +25,7 @@ ul,
 ol,
 table,
 pre,
-dl,
-select {
+dl {
 	margin: 0 0 20px
 }
 
@@ -268,4 +267,24 @@ div.center {
 	text-decoration: none;
 	border-bottom: 1px solid #fff;
 	font-weight: normal;
+}
+
+select {
+    cursor: pointer;
+    border: none;
+    width: 80px;
+    display: inline-block;
+    color: #555555;
+    box-sizing: border-box;
+    margin: 0 0 0 0;
+    padding: 10px;
+    font-size: 14px;
+    vertical-align: baseline;
+    
+    -webkit-appearance:button;
+    -moz-appearance:button;
+    appearance:button;
+    background: #71bcb6 url(arrow_down.png) no-repeat;
+    background-size:20px 30px;
+    background-position: right center;
 }
