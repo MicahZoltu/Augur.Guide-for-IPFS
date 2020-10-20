@@ -31,14 +31,13 @@
         
           <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         
-          <p>{{ site.version2.description | default: site.github.project_tagline }}</p>
+          <p>{{ site.description.version1 | default: site.github.project_tagline }}</p>
         </div>  
 
-        <div id="selectOption">
-        <select name="example">
-          <option value="サンプル1">サンプル1</option>
-          <option value="サンプル2">サンプル2</option>
-          <option value="サンプル3">サンプル3</option>
+        <div id="selectVersion">
+          <select name="example">
+            <option value="version1">version 1</option>
+            <option value="version2">version 2</option>
           </select>
         </div>
         <div id="navcontainer">
