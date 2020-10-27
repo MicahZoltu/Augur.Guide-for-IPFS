@@ -9,11 +9,11 @@
 
 {% assign current_lvl_url_length = lvl_base_url | split: '/' | size %}
 {% if lvl_base_url == '/' %}
-  {% assign current_lvl_url_length = 1 %}
+  {% assign current_lvl_url_length = 2 %}
 {% endif %}
 
 {% capture links %}
-  {% for node in site.pages %}
+  {% for node in include.selected_version %}
     {% assign node_url_length = node.url | split: '/' | size | minus: 1 %}
     {% assign filename = node.url | split: '/' | last %}
     {% if node_url_length == current_lvl_url_length and node.url contains lvl_base_url and filename != 'index.html' and filename contains 'html' %}
@@ -23,7 +23,7 @@
           {% assign lvl_base_url = node.url | replace: '.html' | append: '/' %}
 
           {% comment %} Include can access parent state; hence no variables passed explicitly: {% endcomment %}
-          {% include navigation.html %}
+          {% include common/navigation.html %}
 
           {% comment %} Reverse state changes made by child: {% endcomment %}
           {% assign current_lvl_url_length = current_lvl_url_length | minus: 1 %}

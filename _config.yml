@@ -1,8 +1,31 @@
 theme: jekyll-theme-minimal
 title: Augur.Guide
-logo: https://augur.guide/assets/images/Augur.Guide-Logo-96x96.png
 show_downloads: false
 google_analytics: UA-12186523-5
-description:
-  version1: A friendly user guide to the prediction market protocol owned and operated by the people that use it.
-  version2: description2 test test test.
+description: A friendly user guide to the prediction market protocol owned and operated by the people that use it.
+plugins:
+  - jekyll-seo-tag
+collections_dir: collections
+collections:
+  version1-english:
+    output: true
+    top-page: true
+    version: "version1"
+    language: "English"
+  version2-english:
+    output: true
+    top-page: true
+    version: "version2"
+    language: "English"
+defaults:
+  -
+    scope:
+      path: "_version1-english"
+    values:
+      layout: "content-base"
+  -
+    scope:
+      path: "_version2-english"
+    values:
+      layout: "content-base"
+          
