@@ -1,6 +1,6 @@
 ---
 ---
 
-# Welcome to Augur.Guide for {{ page.collection }}
+# Welcome to Augur.Guide for {{ current_collection.version }}
 
 Under Construction
