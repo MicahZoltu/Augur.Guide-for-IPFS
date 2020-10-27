@@ -4,27 +4,18 @@
   <body>
     <div class="wrapper">
       <header>
+        {% assign current_collection = site.collections | where: "label", page.collection | first %}
         <div class="center">
           {% include common/main-logo.html %}
-
-          {% assign current_collection = site.collections | where: "label", page.collection | first %}
-          <h3><a href="{{ "/" | absolute_url }}{{ page.collection }}">for {{ current_collection.version }} ({{ current_collection.language }})</a></h3>
-        
+          <h3><a href="{{ "/" | absolute_url }}{{ page.collection }}">for {{ current_collection.version }}</a></h3>
         </div>
+        
         <div id="navcontainer">
-          {% case page.collection %}
-            {% when "version1-english" %}
-              {% assign selected_content = site.version1-english %}
-            {% when "version2-english" %}
-              {% assign selected_content = site.version2-english %}
-            {% else %}
-              {% assign selected_content = nil %}
-          {% endcase %}
-          {% include common/navigation.html max_depth=3 selected_version=selected_content %}
-          
+          {% include common/navigation.html max_depth=3 selected_docs=current_collection.docs %}
         </div>
         <br />
       </header>
+      
       <section>
         {{ content }}
         <div class="right">{% github_edit_link "> Improve this page" %}</div>
