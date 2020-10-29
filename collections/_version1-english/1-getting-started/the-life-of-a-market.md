@@ -10,7 +10,7 @@ Understanding the process flow of a market is important in using Augur effective
 {% capture image_url %}
   /assets/images/{{page.collection}}/Simplified Prediction Market Lifetime.svg
 {% endcapture %}
-{% include common/image.html url=image_url description="Figure 1. Simplified Prediction Market Lifetime" %}
+{% include image.html url=image_url description="Figure 1. Simplified Prediction Market Lifetime" %}
 </div>
 
 Let’s go through the steps:

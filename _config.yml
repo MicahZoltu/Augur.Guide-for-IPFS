@@ -1,8 +1,8 @@
 theme: jekyll-theme-minimal
 title: Augur.Guide
+description: A friendly user guide to the prediction market protocol owned and operated by the people that use it.
 show_downloads: false
 google_analytics: UA-12186523-5
-description: A friendly user guide to the prediction market protocol owned and operated by the people that use it.
 plugins:
   - jekyll-seo-tag
 collections_dir: collections
@@ -28,4 +28,3 @@ defaults:
       path: "_version2-english"
     values:
       layout: "content-base"
-          

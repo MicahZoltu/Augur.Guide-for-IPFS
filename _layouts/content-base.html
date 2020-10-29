@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-  {% include common/header.html %}
+  {% include header.html %}
   <body>
     <div class="wrapper">
       <header>
         {% assign current_collection = site.collections | where: "label", page.collection | first %}
         <div class="center">
-          {% include common/main-logo.html %}
+          {% include logo-title.html %}
           <h3><a href="{{ "/" | absolute_url }}{{ page.collection }}">for {{ current_collection.version }}</a></h3>
         </div>
-        
         <div id="navcontainer">
-          {% include common/navigation.html max_depth=3 selected_docs=current_collection.docs %}
+          {% include navigation.html max_depth=3 selected_docs=current_collection.docs %}
         </div>
         <br />
       </header>
-      
       <section>
         {{ content }}
-        <div class="right">{% github_edit_link "> Improve this page" %}</div>
+        {% comment %}
+          Don't use "github_edit_link" to generate a URL to link to the github edit page. Because this variable does not include the path which is defined by "collections_dir". 
+        {% endcomment %}
+        <!--div class="right">{% github_edit_link "> Improve this page" %}</div-->
+        <div class="right"><a href="{{ site.github.repository_url }}/edit/master/{{site.collections_dir}}/{{ page.relative_path }}">> Improve this page</a></div>
       </section>
     </div>
-    {% include common/google-analytics.html %}
+    {% include google-analytics.html %}
   </body>
 </html>

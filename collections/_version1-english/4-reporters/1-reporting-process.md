@@ -10,7 +10,7 @@ Ok, let’s blow up the reporting process box from ["The Life of a Market"]({{ "
 {% capture image_url %}
   /assets/images/{{page.collection}}/Reporting Flowchart.svg
 {% endcapture %}
-{% include common/image.html url=image_url description="Figure 1. Reporting Flowchart" %}
+{% include image.html url=image_url description="Figure 1. Reporting Flowchart" %}
 </div>
 
 1. [**Designated Reporting**]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#Designated_Reporting_Phase) - This is the first step of the reporting phase and is triggered by the market [end time]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#End_Time) occurring, which was originally set by the market creator when the market was created. The market creator picked an address to be the [designated reporter]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#Designated_Reporter), which is usually the market creator itself. This designated reporter now has 3 days to perform the [initial report]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#Initial_Report), which is the first [tentative outcome]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#Tentative_Outcome) for the market. The designated reporter has to post a [bond]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#Designated_Reporter_Stake) (in REP) to incentivise other reporters to make sure the outcome selected is the correct answer. The designated reporter does not get to unilaterally decide how the market resolves, the rest of the reporter community has to generally agree. This decentralized resolution process is one of the main strengths of Augur, but it can also cause delays in resolution.

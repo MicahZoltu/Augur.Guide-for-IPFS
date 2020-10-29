@@ -16,7 +16,7 @@ For example, a [“Yes/No” market]({{ "/" | absolute_url }}/{{page.collection}
 {% capture image_url %}
   /assets/images/{{page.collection}}/fork-example.svg
 {% endcapture %}
-{% include common/image.html url=image_url description="Figure 1. Forked Genesis Universe Example" %}
+{% include image.html url=image_url description="Figure 1. Forked Genesis Universe Example" %}
 </div>
 
 Initially, these newly created universes are empty: they contain no markets or REP tokens. When a fork is initiated, the [parent universe]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#Parent_Universe) becomes permanently locked. In a [locked universe]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#Locked_Universe), no new markets may be created. Users may continue trading [SHARES]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#SHARE) in markets in locked universes, and markets in a locked universe may still receive their [initial reports]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#Initial_Report). However, no reporting rewards are paid out there, no disputes can occur, and markets in locked universes cannot be finalized.
