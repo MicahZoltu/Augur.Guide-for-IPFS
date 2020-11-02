@@ -7,14 +7,14 @@
         {% assign current_collection = site.collections | where: "label", page.collection | first %}
         <div class="center">
           {% include logo-title.html %}
-          <h3><a href="{{ "/" | absolute_url }}{{ page.collection }}">for {{ current_collection.version }}</a></h3>
+          <h3 class="no-anchor"><a href="{{ "/" | absolute_url }}{{ page.collection }}">for {{ current_collection.version }}</a></h3>
         </div>
         <div id="navcontainer">
           {% include navigation.html max_depth=3 selected_docs=current_collection.docs %}
         </div>
         <br />
       </header>
-      <section>
+      <section id="test">
 
         {{ content }}
 
