@@ -35,62 +35,6 @@ export function tdIconLinkByFile(url, filePath) {
   return element;
 }
 
-export function tdIconLinkByFontawesome(url, iconClassName) {
-  let element = document.createElement("td");
-  let a = document.createElement("a");
-  let i = document.createElement("i");
-
-  i.className += iconClassName;
-  a.appendChild(i);
-
-  a.href = url;
-  a.target = "_blank";
-  element.appendChild(a);
-
-  element.style.textAlign = "center";
-
-  return element;
-}
-export function tdCutLongTextAndLinkIconByFontawesome(url, longText) {
-  let td = document.createElement("td");
-  let a = document.createElement("a");
-  let i = document.createElement("i");
-  let shortText = longText.substr(0, 16) + "...";
-
-  a.appendChild(document.createTextNode(shortText));
-
-  i.className += "fas fa-external-link-alt";
-  a.appendChild(i);
-
-  a.href = url;
-  a.target = "_blank";
-
-  td.appendChild(a);
-
-  td.style.textAlign = "center";
-
-  return td;
-}
-export function tdTextAndLinkIconByFontawesome(url, text, textAlign = "left") {
-  let td = document.createElement("td");
-  let a = document.createElement("a");
-  let i = document.createElement("i");
-
-  a.appendChild(document.createTextNode(text + "  "));
-
-  i.className += "fas fa-external-link-alt";
-  a.appendChild(i);
-
-  a.href = url;
-  a.target = "_blank";
-
-  td.appendChild(a);
-
-  td.style.textAlign = textAlign;
-
-  return td;
-}
-
 export function tdTextLink(url, text, addedText = "", textAlign) {
   let td = document.createElement("td");
   let a = document.createElement("a");
