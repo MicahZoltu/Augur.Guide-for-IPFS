@@ -8,7 +8,7 @@ export function create(param) {
   let tr = document.createElement("tr");
 
   for (const ensDomainData of param.arrEnsDomainData) {
-    if (isTargetDomain(ensDomainData.domainName, param.outputDomainName)) {
+    if (isTargetDomain(ensDomainData.domainName, param.outputCommunity)) {
       tr = document.createElement("tr");
       tr.appendChild(BaseElements.th(ensDomainData.domainName, 1, 3, "left"));
       tbody.appendChild(tr);
@@ -76,24 +76,25 @@ function createTableRow(tbody, headerName, url, text, addedText = "") {
   tr.appendChild(BaseElements.tdTextLink(url, text, addedText));
   tbody.appendChild(tr);
 }
-function isTargetDomain(currentDomainName, outputDomainName) {
-  if (outputDomainName == null) {
-    for (let cummunityDomainName in CONSTANTS.ENS
-      .CommunityManagedAugurUiDomains) {
-      if (
-        currentDomainName.endsWith(
-          CONSTANTS.ENS.CommunityManagedAugurUiDomains[cummunityDomainName]
-        )
-      ) {
-        return false;
+function isTargetDomain(currentDomainName, outputCommunity) {
+  if (outputCommunity == null) {
+    for (const CommunityNames in CONSTANTS.ENS.CommunityManagedAugurUiDomains) {
+      for (const DomainName in CONSTANTS.ENS.CommunityManagedAugurUiDomains[CommunityNames]) {
+        if (DomainName == currentDomainName) {
+          return false;
+        }
       }
     }
     return true;
   } else {
-    if (currentDomainName.endsWith(outputDomainName)) {
-      return true;
-    } else {
-      return false;
+    for (const OutputDomainName in outputCommunity) {
+      if (
+        currentDomainName == OutputDomainName &&
+        outputCommunity[OutputDomainName]
+      ) {
+        return true;
+      }
     }
+    return false;
   }
 }

@@ -59,13 +59,16 @@ export function create(arrEnsDomainData) {
   }
 }
 function isTargetDomain(currentDomainName) {
-  for (let cummunityDomainName in CONSTANTS.ENS
-    .CommunityManagedAugurUiDomains) {
-    if (
-      currentDomainName ==
-      CONSTANTS.ENS.CommunityManagedAugurUiDomains[cummunityDomainName]
-    ) {
-      return true;
+  for (let CommunityName in CONSTANTS.ENS.CommunityManagedAugurUiDomains) {
+    for (const DomainName in CONSTANTS.ENS.CommunityManagedAugurUiDomains[
+      CommunityName
+    ]) {
+      if (
+        currentDomainName == DomainName &&
+        CONSTANTS.ENS.CommunityManagedAugurUiDomains[CommunityName][DomainName]
+      ) {
+        return true;
+      }
     }
   }
   return false;

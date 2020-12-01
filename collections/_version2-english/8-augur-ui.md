@@ -81,22 +81,12 @@ The CID registered with the ENS is updated by a DAO whose members are these Augu
 ### Links & Current Status
 **Note:** Subdomains do not work well with ens.link, so they have ceased to be updated.  It is recommended to **NOT** use `trading.augur2.eth`, `reporting.augur2.eth` as they are not maintained.
 
-<div class="center"><table id="augur2.eth-table"></table></div>
-
----
-
-## augurapp.eth
-`augurapp.eth` is also one of the ENS domains where Augur UI is registered. This domain is managed by Augur community members of [AugurDAO]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#AugurDAO).
-
-### Links & Current Status
-**Note:** The content of the subdomain `bet.augurapp.eth` have not been updated lately, so you should not use it.
-<div class="center"><table id="augurapp.eth-table"></table></div>
+<div class="center"><table id="smarty-pants-table"></table></div>
 
 ## ENS domains other than the above
 If there are ENS domain which has Augur UI content other than the above, these will be listed here. If the list is not shown, that means there are no such ENS domain.
 
 <div class="center"><table id="unknown-ens-domain-table"></table></div>
-
 
 # Official Release
 

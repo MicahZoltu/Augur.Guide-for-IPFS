@@ -20,17 +20,8 @@ async function main() {
   // augur2.eth list
   let paramTableAugurUiOnEns = {
     arrEnsDomainData: arrEnsDomainData,
-    tableID:
-      CONSTANTS.ENS.CommunityManagedAugurUiDomains.SmartyPants + "-table",
-    outputDomainName: CONSTANTS.ENS.CommunityManagedAugurUiDomains.SmartyPants,
-  };
-  HtmlElements.TableAugurUiOnEns.create(paramTableAugurUiOnEns);
-
-  // augurapp.eth list
-  paramTableAugurUiOnEns = {
-    arrEnsDomainData: arrEnsDomainData,
-    tableID: CONSTANTS.ENS.CommunityManagedAugurUiDomains.AugurDao + "-table",
-    outputDomainName: CONSTANTS.ENS.CommunityManagedAugurUiDomains.AugurDao,
+    tableID: "smarty-pants-table",
+    outputCommunity: CONSTANTS.ENS.CommunityManagedAugurUiDomains.SmartyPants,
   };
   HtmlElements.TableAugurUiOnEns.create(paramTableAugurUiOnEns);
 
@@ -38,7 +29,7 @@ async function main() {
   paramTableAugurUiOnEns = {
     arrEnsDomainData: arrEnsDomainData,
     tableID: "unknown-ens-domain-table",
-    outputDomainName: null,
+    outputCommunity: null,
   };
   HtmlElements.TableAugurUiOnEns.create(paramTableAugurUiOnEns);
 }
