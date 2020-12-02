@@ -12,20 +12,23 @@ export function getData() {
     let cidv0s = [];
     let cidv1s = [];
     let contentHashes = [];
+    let tagName = [];
 
     for (const guthubReleaseData of arrGithubReleaseData) {
       cidv0s = getCIDv0s(guthubReleaseData.body);
       cidv1s = getCIDv1s(cidv0s);
       contentHashes = getContentHashes(cidv0s);
+      tagName = guthubReleaseData.tag_name;
 
       arrReleaseData.push({
-        tagName: guthubReleaseData.tag_name,
+        tagName: tagName,
         githubUrl: guthubReleaseData.html_url,
         createdDatetime: guthubReleaseData.created_at,
         publishedDatetime: guthubReleaseData.published_at,
         CIDv0s: cidv0s,
         CIDv1s: cidv1s,
         contentHashes: contentHashes,
+        currencies: getCurrencies(tagName),
         note: getNote(
           guthubReleaseData.id,
           githubLatestReleaseData.id,
@@ -142,4 +145,13 @@ function getNote(targetId, latestId, isPreRelease) {
     ret = "-";
   }
   return ret;
+}
+
+function getCurrencies(tagName){
+  if(CONSTANTS.AugurUiVersionInfo.hasOwnProperty(tagName)){
+    return CONSTANTS.AugurUiVersionInfo[tagName].Currencies
+  }else{
+    return ["No Data"]
+  }
+
 }
