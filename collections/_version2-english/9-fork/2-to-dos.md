@@ -24,12 +24,22 @@ title: To-do's
 If you are a REP holder, there are some things you **MUST** do for a [fork]({{glossary_fork}}) to not lose your [REP]({{glossary_reputation_token}}).
 
 ## Before a fork starts
-REP holders have 2 things to do even before a [fork]({{glossary_fork}}) starts so that they don't lose the value of their [REP]({{glossary_reputation_token}}). One is to [convert REPv1 to REPv2](#convert-repv1-to-repv2) and the other is to [check monthly to see if a fork occurs](#check-monthly-to-see-if-a-fork-occurs).
+REP holders have a thing to do even before a [fork]({{glossary_fork}}) starts so that they don't lose the value of their [REP]({{glossary_reputation_token}}). That is to **check monthly to see if a fork occurs**.
 
-### Convert REPv1 to REPv2
-REPv1 holders **MUST** convert their [REPv1]({{glossary_repv1}}) to [REPv2]({{glossary_repv2}}), because REP in the [parent universe]({{glossary_parent_universe}}) can be migrated to only its [child universe]({{glossary_child_universe}}) and once the fork is complete migration into a child universe is no longer possible!
+[Forks]({{glossary_fork}}) last for 60 days, so it is strongly recommended that all REP holders "check in" on the project at least once a month to make sure that no fork is underway or they risk losing all of their REP.
 
-That means they have to follow the chain of [universes]({{glossary_universe}}). For example, [forks]({{glossary_fork}}) occur in the following order:
+The process of "checking in" just means open the [Augur UI]({{ "/" | absolute_url }}/{{page.collection}}/8-augur-ui.html) or ask around (Discord, Twitter, Reddit, etc.) and see if a fork is underway. If no fork is underway then you can go back to passively holding for a month until your next check in without risk of losing your REP.
+
+Useful links for checking if a fork occurs are:
+ - [Augur Discord server](https://discord.gg/guXC9Bd4)  ⭐*recommended*⭐
+ - The [official Twitter account](https://twitter.com/augurproject)
+ - The [official blog](https://augur.net/blog)
+ - The subreddit [/r/Augur](https://www.reddit.com/r/Augur/)
+
+## By the end of a fork
+REPv1 holders **MUST** convert their [REPv1]({{glossary_repv1}}) to [REPv2]({{glossary_repv2}}) before 60 days have passed since the [fork]({{glossary_fork}}) started, because [REP]({{glossary_reputation_token}}) in the [parent universe]({{glossary_parent_universe}}) can be migrated to only its [child universe]({{glossary_child_universe}}) and once the fork is complete migration into a child universe is no longer possible!
+
+That means they have to follow the chain of [universes]({{glossary_universe}}). For example, forks occur in the following order:
 ```
 universe A → universe B → universe C
 ```
@@ -40,17 +50,6 @@ universe A → universe B → universe C
 It cannot skip `universe B`.
 {% capture image_src %}{{ "/" | absolute_url }}assets/images/{{page.collection}}/fork/to-dos/chain-of-universes.svg{% endcapture %}
 {% include zoom-image.html src=image_src caption="Figure 1. chain of universes" %}
-
-### Check monthly to see if a fork occurs
-[Forks]({{glossary_fork}}) last for 60 days, so it is strongly recommended that all REP holders "check in" on the project at least once a month to make sure that no fork is underway or they risk losing all of their REP.
-
-The process of "checking in" just means open the [Augur UI]({{ "/" | absolute_url }}/{{page.collection}}/8-augur-ui.html) or ask around (Discord, Twitter, Reddit, etc.) and see if a fork is underway. If no fork is underway then you can go back to passively holding for a month until your next check in without risk of losing your REP.
-
-Useful links for checking if a fork occurs are:
- - [Augur Discord server](https://discord.gg/guXC9Bd4)  ⭐*recommended*⭐
- - The [official Twitter account](https://twitter.com/augurproject)
- - The [official blog](https://augur.net/blog)
- - The subreddit [/r/Augur](https://www.reddit.com/r/Augur/)
 
 ## After starting a fork (60 days)
 REP holders needs to pick a side and migrate their REP to the [child universe]({{glossary_child_universe}}) they believe aligns with reality within 60 days from starting a [fork]({{glossary_fork}}).
