@@ -31,7 +31,7 @@ The [whitepaper](https://github.com/AugurProject/whitepaper/blob/master/v2/engli
 Then, what is a [locked universe]({{glossary_locked_universe}})? And what can users do in the [parent universe]({{glossary_parent_universe}}) and [child universes]({{glossary_child_universe}}) specifically? The purpose of this page is to clear up those questions.
 
 ## Summary
-From a conclusion, when a [fork]({{glossary_fork}}) starts, in the [parent universe]({{glossary_parent_universe}}), [REP]({{glossary_reputation_token}}) cannot be staked on any [market]({{glossary_market}}) and markets cannot be [finalized]({{glossary_finalized_market}}), in addition to that, after, new markets cannot be created. On the other hand, in [child universes]({{glossary_child_universe}}), users can do anything right after it is created.
+From a conclusion, when a [fork]({{glossary_fork}}) starts, in the [parent universe]({{glossary_parent_universe}}), [REP]({{glossary_reputation_token}}) cannot be staked on any [market]({{glossary_market}}) and markets cannot be [finalized]({{glossary_finalized_market}}), in addition to that, new markets cannot be created. On the other hand, in [child universes]({{glossary_child_universe}}), users can do anything right after it is created.
 <table>
   <thead>
     <tr>
