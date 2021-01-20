@@ -24,7 +24,7 @@ title: To-do's
 If you are a REP holder, there are some things you **MUST** do for a [fork]({{glossary_fork}}) to not lose your [REP]({{glossary_reputation_token}}).
 
 ## Before a fork starts
-REP holders have a thing to do even before a [fork]({{glossary_fork}}) starts so that they don't lose the value of their [REP]({{glossary_reputation_token}}). That is to **check monthly to see if a fork occurs**.
+Before a [fork]({{glossary_fork}}) starts, REP holders still have to be actively involved so that they don't lose the value of their [REP]({{glossary_reputation_token}}). The minimum involvement necessary to avoid permanent losses of REP is to **check monthly to see if a fork occurs**.
 
 [Forks]({{glossary_fork}}) last for 60 days, so it is strongly recommended that all REP holders "check in" on the project at least once a month to make sure that no fork is underway or they risk losing all of their REP.
 
@@ -65,3 +65,5 @@ They may sell their [REP]({{glossary_reputation_token}}) before the [fork]({{glo
 No. If you migrate your [REP]({{glossary_reputation_token}}) during the [forking period]({{glossary_forking_period}}), there is no reward for that. However, if you staked your REP on the [forking market]({{glossary_forking_market}})'s outcome before the fork starts and the outcome you staked on becomes the [final outcome]({{glossary_final_outcome}}) of the forking market, you will receive a 40% [ROI]({{glossary_roi}}) on your stake in the [winning universe]({{glossary_winning_universe}}).
 
 In other words, there is possibility only for the REP participated in a [dispute]({{glossary_dispute}}) to receive a 40% ROI. The REP migrated during the forking period cannot receive any reward, even if the child universe which the REP migrated to is the winning universe.
+
+There is no reward for migrating REP. But there is a severe panishment, that your REP cannot be migrated to any child universe, for not migrating your REP within the [forking period]({{glossary_forking_period}}).
