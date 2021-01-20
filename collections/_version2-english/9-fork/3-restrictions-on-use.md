@@ -31,7 +31,7 @@ The [whitepaper](https://github.com/AugurProject/whitepaper/blob/master/v2/engli
 Then, what is a [locked universe]({{glossary_locked_universe}})? And what can users do in the [parent universe]({{glossary_parent_universe}}) and [child universes]({{glossary_child_universe}}) specifically? The purpose of this page is to clear up those questions.
 
 ## Summary
-From a conclusion, when a [fork]({{glossary_fork}}) starts, in the [parent universe]({{glossary_parent_universe}}), [REP]({{glossary_reputation_token}}) cannot be staked on any [market]({{glossary_market}}) and markets cannot be [finalized]({{glossary_finalized_market}}). Additionally, after the [forking period]({{glossary_forking_period}}), any market can be created in the parent universe. On the other hand, in [child universes]({{glossary_child_universe}}), users can do anything right after it is created.
+From a conclusion, when a [fork]({{glossary_fork}}) starts, in the [parent universe]({{glossary_parent_universe}}), [REP]({{glossary_reputation_token}}) cannot be staked on any [market]({{glossary_market}}) and markets cannot be [finalized]({{glossary_finalized_market}}), in addition to that, after, new markets cannot be created. On the other hand, in [child universes]({{glossary_child_universe}}), users can do anything right after it is created.
 <table>
   <thead>
     <tr>
@@ -55,7 +55,7 @@ From a conclusion, when a [fork]({{glossary_fork}}) starts, in the [parent unive
       <td rowspan="1" colspan="1">Creation</td>
       <td rowspan="1" colspan="1" class="center">✅</td>
       <td rowspan="1" colspan="1" class="center">-</td>
-      <td rowspan="1" colspan="1" class="center">✅</td>
+      <td rowspan="1" colspan="1" class="center">❌</td>
       <td rowspan="1" colspan="1" class="center">✅</td>
       <td rowspan="1" colspan="1" class="center">❌</td>
       <td rowspan="1" colspan="1" class="center">✅</td>
@@ -134,15 +134,13 @@ Now let's break it down into each phase and see more details.
 Before a [fork]({{glossary_fork}}), there are no restrictions in the [parent universe]({{glossary_parent_universe}}). And [child universes]({{glossary_child_universe}}) are not yet created at this point.
 
 ## During a Fork
-"During a fork" means "during the [forking period]({{glossary_forking_period}})". During this period, REP holders cannot stake [REP]({{glossary_reputation_token}}) on any [market]({{glossary_market}}) in the [parent universe]({{glossary_parent_universe}}), since REP in the parent universe needs to be migrated to one of the [child universes]({{glossary_child_universe}}). Therefore, markets in the parent universe are never [finalized]({{glossary_finalized_market}}). 
+"During a fork" means "during the [forking period]({{glossary_forking_period}})". During this period, REP holders cannot stake [REP]({{glossary_reputation_token}}) on any [market]({{glossary_market}}) in the [parent universe]({{glossary_parent_universe}}), since REP in the parent universe needs to be migrated to one of the [child universes]({{glossary_child_universe}}). Therefore, markets in the parent universe are never [finalized]({{glossary_finalized_market}}). And users may not create new markets in the parent univese after a fork starts.
 
 Even if a market in the parent universe has not been migrated to the [winning universe]({{glossary_winning_universe}}), users may trade and [settle]({{glossary_settlement}}) their [shares]({{glossary_share}}) on the market. It does not matter whether the market is already finalized or not, users can do those on any market in the parent universe. Trading in the parent universe, traders pay [creator fee]({{glossary_creator_fee}}) and [reporting fee]({{glossary_reporting_fee}}), and those fees are added to [reporting fee pool]({{glossary_reporting_fee_pool}}). So users may purchase [participation tokens]({{glossary_participation_token}}) to collect those fees and redeem them.
 
-Users may also create a market in the parent universe. However, after a [fork]({{glossary_fork}}) has started, a market in the parent universe can not be finalized. To finalize a market, someone needs to migrate it to the winning universe (See [migration of the objects]({{url_migration_of_the_objects}}#non-forking-market) for details).
-
-In child universes, there are no restrictions. It doesn't matter whether a child universe is winning one or losing one. You can do everything on it as soon as it is created.  Note: child universes are not created as soon as a fork starts, they are created when the first time REP is migrated to them.  See [migration of the objects]({{url_migration_of_the_objects}}#forking-market) for details.)
+In child universes, there are no restrictions. It doesn't matter whether a child universe is winning one or losing one. You can do everything on it as soon as it is created.  Note: child universes are not created as soon as a fork starts, they are created when the first time REP is migrated to them (See [migration of the objects]({{url_migration_of_the_objects}}#forking-market) for details).
 
 ## After a Fork
-After the [forking period]({{glossary_forking_period}}), what users can do in the [parent universe]({{glossary_parent_universe}}) is the same as during the forking period basically, but in addition to that, they may not create a [market]({{glossary_market}}) in the parent universe any more. Traders still can trade/settle their [share]({{glossary_share}}) on the markets which have not been migrated to the [winning universe]({{glossary_winning_universe}}), and the [fees]({{glossary_trading_fee}}) which are paid by traders are added to [reporting fee pool]({{glossary_reporting_fee_pool}}) and distributed to [participation token]({{glossary_participation_token}}) holders in the parent universe.
+After the [forking period]({{glossary_forking_period}}), what users can do in the [parent universe]({{glossary_parent_universe}}) is the same as during the forking period. Traders still can trade/settle their [share]({{glossary_share}}) on the markets which have not been migrated to the [winning universe]({{glossary_winning_universe}}), and the [fees]({{glossary_trading_fee}}) which are paid by traders are added to [reporting fee pool]({{glossary_reporting_fee_pool}}) and distributed to [participation token]({{glossary_participation_token}}) holders in the parent universe.
 
 In [child universes]({{glossary_child_universe}}), continuing from during the forking period, there are no restrictions.
