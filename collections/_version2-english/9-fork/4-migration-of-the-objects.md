@@ -68,7 +68,7 @@ This can be summarized as follows:
     - REP
 
 # Child universe is created by REP holders
-A [child universe]({{glossary_child_universe}}) is created when the [REP]({{glossary_reputation_token}}) holder who *first* migrates their REP to it. Even if the [forking market]({{glossary_forking_market}}) has [finalized]({{glossary_finalized_market}}) or the [forking period]({{glossary_forking_period}}) ends, the [child universe]({{glossary_child_universe}}) is not created without migrating REP. The REP holder who *first* migrates their REP has to pay not only the [transaction fee]({{glossary_transaction_fee}}) of migrating their REP, but also the transaction fee of creating the child universe.
+A [child universe]({{glossary_child_universe}}) is created when the [REP]({{glossary_reputation_token}}) holder who *first* migrates their REP to it. Even if the [forking market]({{glossary_forking_market}}) has [finalized]({{glossary_finalized_market}}) or the [forking period]({{glossary_forking_period}}) ends, the [child universe]({{glossary_child_universe}}) is not created without migrating REP. And the REP holder who *first* migrates their REP has to pay not only the [transaction fee]({{glossary_transaction_fee}}) of migrating their REP, but also the transaction fee of creating the child universe.
 
 ---
 
