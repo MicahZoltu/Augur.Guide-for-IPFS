@@ -115,7 +115,7 @@ If you migrate the market which is past its [event end time]({glossary_end_time}
 
 The migration of the non-forking markets is not mandatory. Even if a fork ends, you can still trade and [settle]({{glossary_settlement}}) your [shares]({{glossary_share}}) on the markets in the parent universe (See [restrictons on use]({{url_restrictions_on_use}}) for details). However, after a fork starts, markets in the parent universe cannot be [finalized]({{glossary_finalized_market}}). For the market to be finalized, you need to migrate it to the winning universe.
 
-Although the person who migrates a non-forking market needs to do somethings (such as supply creation bond, submit the initial report, and pay the [transaction fee]({{glossary_transaction_fee}}) for that), they will get [creator fees]({{glossary_creator_fee}}) paid by traders on the market in the winning universe. It might motivate for migrating markets.
+Although the person who migrates a non-forking market needs to do somethings (such as supply creation bond, submit the initial report, and pay the [transaction fee]({{glossary_transaction_fee}}) for that), they will get [creator fees]({{glossary_creator_fee}}) paid by traders on the market in the winning universe. It might motivate migrating markets.
 
 ## Staked REP
 All staked [REP]({{glossary_reputation_token}}) on the non-forking markets are un-staked and refunded to REP holders who staked it when a [fork]({{glossary_fork}}) starts so that they migrate their REP during the [forking period]({{glossary_forking_period}}).
