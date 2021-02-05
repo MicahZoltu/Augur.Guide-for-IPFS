@@ -2,9 +2,9 @@ All Theoretical REP: |-
   The maximum possible total supply for a certain version of  <a href="#Reputation_Token">REP</a>. This is the sum of REP existing in a particular <a href="#Universe">universe</a> and any REP that is eligible for migration into that universe.
   <br>
   <br>
-  Depending on the situation, there are three ways to calculate the value:
+  Depending on the situation, there are two ways to calculate the value:
   <ol>
-    <li>If no <a href="#Fork" >fork</a> has occurred in the universe or a fork has started but not completed, then the theoretic REP supply in the universe is the sum of the REP in that Universe and the theoretic REP supply in the previous Augur version (since REP can migrate to from a previous version to the next version at any time prior to a fork). For Augur v2, this totals to 11,000,000 REP minus any that has been burned during v2 disputes.</li>
+    <li>If no <a href="#Fork" >fork</a> has occurred in the universe or a fork has started but not completed, then the theoretic REP supply in the universe is the sum of the REP in that Universe and the theoretic REP supply in the previous Augur version (since REP can migrate to from a previous version to the next version at any time prior to a fork). For Augur v2, this totals to 11,000,000 REP minus any that has been burned during v2 <a href="#Dispute">disputes</a>.</li>
     <li>If a fork has occurred and the <a href="#Forking_Period">forking period</a> has ended, then the theoretic REP supply in the universe is just the amount of REP in that universe (since neither REP in the <a href="#Parent_Universe">parent universe</a> nor REP in previous versions can be migrated after a fork completes).</li>
   </ol>
   This value is used to calculate the <a href="#Forking_Threshold">forking threshold</a>.
