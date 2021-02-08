@@ -65,17 +65,7 @@ Non-Finalized Market: <i>under construction</i>
 Open Interest: <i>under construction</i>
 Open Reporting Phase: <i>under construction</i>
 Outcome: <i>under construction</i>
-Parent Universe: |-
-  A parent universe is a <a href="#Universe">universe</a> that has spawned <a href="#Child_Universe">child universes</a> because a <a href="#Fork">fork</a> had occurred in the parent universe.
-  <br>
-  <br>
-  For 60 days after a fork starts (this 60 days is called <a href="#Forking_Period">forking period</a>), <a href="#Reputation_Token">REP</a> in the parent universe can be migrated to a child universe, but after the 60 days you cannot migrate your REP to any child universe.
-  <br>
-  <br>
-  After a fork starts, there are some restrictions in the parent universe:
-  Users cannot create new <a href="#Market">markets</a> and cannot stake any markets, since REP in the parent universe must be migrated to one of the child universes during the forking period.
-  Therefore markets in the parent universe are never <a href="#Finalized_Market">finalized</a> after a fork starts.
-
+Parent Universe: <i>under construction</i>
 Participation Token: <i>under construction</i>
 REP Bond: <i>under construction</i>
 REPv1: <i>under construction</i>
