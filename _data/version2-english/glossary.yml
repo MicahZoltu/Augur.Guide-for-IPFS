@@ -97,7 +97,7 @@ Share: <i>under construction</i>
 Sibling Universe: |-
   A sibling universe is each of <a href="#Child_Universe">child universes</a> having one <a href="#Parent_Universe">parent universe</a> in common.
   Sibling universes are entirely disjoint.
-  For example, <a href="#Reputation_Token">REP</a> can be used to stake on <a href="#Ourcome">outcomes</a> only for <a href="#Market">markets</a> that exist in the same <a href="#Universe">universe</a> as the REP.
+  For example, <a href="#Reputation_Token">REP</a> can be used to stake on <a href="#Outcome">outcomes</a> only for <a href="#Market">markets</a> that exist in the same <a href="#Universe">universe</a> as the REP.
   It cannot be used in another universe.
   Also, during the <a href="#Forking_Period">forking period</a>, REP holders can migrate their REP from the parent universe to a child universe, but they cannot migrate from one sibling universe to another.
 Smarty-pants: |-
