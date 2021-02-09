@@ -58,9 +58,25 @@ Initial Report: <i>under construction</i>
 Initial Reporter: <i>under construction</i>
 Initial Report Bond: <i>under construction</i>
 Invalid Outcome: <i>under construction</i>
-Locked Universe: <i>under construction</i>
-Losing Universe: <i>under construction</i>
-Lying Universe: <i>under construction</i>
+Locked Universe: |-
+  A locked universe is the <a href="#Parent_Universe">parent universe</a> after a <a href="#Fork">fork</a> has started.
+  The reason why it is called *locked* because the parent universe is imposed some restrictions after a fork starts: Users cannot create new <a href="#Market">markets</a> and cannot stake their <a href="#Reputation_Token">REP</a> on any markets, and markets are never <a href="#Finalized_Market">finalized</a>.
+  (See <a href="/version2-english/9-fork/3-restrictions-on-use.html" target="_blank">restrictions on use</a> for details.)
+Losing Universe: |-
+  A kind of <a href="#Child_Universe">child universe</a>. The child universe that receives the most migrated <a href="#Reputation_Token">REP</a> from the <a href="#Parent_Universe">parent universe</a> by the end of a <a href="#Fork">fork</a> becomes the winning universe, the other child universes become the <a href="#Losing_Universe">losing universe</a>.
+  <br>
+  <br>
+  <a href="#Market">Markets</a> in the parent universe cannot be migrated to losing universes, they can be migrated only to the winning universe. 
+  Losing universes receive only two things from the parent universe: One is the <a href="#Forking_Market">forking market</a> that is duplicated from the parent universe and <a href="#Finalized_Market">finalized</a> as the <a href="#Outcome">outcome</a> that aligns with the losing universe. The other is REP whose holders believe the outcome that aligns with the losing universe is true.
+  <br>
+  <br>
+  When the system is working correctly, and people are behaving economically rationally (profit motivated), the expectation is that the losing universes will align with the <a href="#Lying_Universe">lying universes</a>.
+  REP in the losing universe is expected to lose its value, since future traders won’t want to trade in a <a href="#Universe">universe</a> where <a href="#Reporter">reporters</a> have a history of lying which means REP in that universe will not receive a meaningful amount of <a href="#Trading_Fee">trading fees</a>. 
+Lying Universe: |-
+  A universe that has the forked market whose final outcome does not correspond to objective reality.
+  チャイルドユニバースの一種。フォーキングマーケットのファイナルアウトカムが事実と異なるアウトカムにファイナライズしたフォーキングマーケットを持つ。
+  
+  When the system is working correctly, and people are behaving economically rationally (profit motivated), the expectation is that the losing universes will align with the lying universes, but that is not necessarily. For any reason, the lying universes become the winning universes.
 Market: <i>under construction</i>
 Market Creator: <i>under construction</i>
 No-show Bond: <i>under construction</i>
@@ -75,11 +91,11 @@ Parent Universe: |-
   For 60 days after a fork starts (the 60 days is called <a href="#Forking_Period">forking period</a>), <a href="#Reputation_Token">REP</a> in the parent universe can be migrated to a child universe. But after the forking period, you cannot migrate your REP to any child universe.
   <br>
   <br>
-  After a fork starts, the parent universe is called <a href="#Locked_Universe">locked universe</a> because there are some restrictions:
+  After a fork starts, the parent universe is <a href="#Locked_Universe">locked</a> because there are some restrictions.
   Users cannot create new <a href="#Market">markets</a> and cannot stake their REP on any markets, since REP in the parent universe must be migrated to one of the child universes during the forking period.
-  Therefore markets in the parent universe are never <a href="#Finalized_Market">finalized</a> after a fork starts.
+  Therefore no more markets can <a href="#Finalized_Market">finalize</a> in the parent universe after a fork starts.
   <br>
-  But users can trade and <a href="#Settlement">settle</a> their <a href="#Share">shares</a> on markets, and purchase and redeem <a href="#Participation_Token">participation tokens</a> in the parent universe even after a fork starts.
+  Users can trade and <a href="#Settlement">settle</a> their <a href="#Share">shares</a> on markets, and redeem <a href="#Participation_Token">participation tokens</a> in the parent universe even after a fork starts.
   (See <a href="/version2-english/9-fork/3-restrictions-on-use.html" target="_blank">restrictions on use</a> for details.)
 Participation Token: <i>under construction</i>
 REP Bond: <i>under construction</i>
@@ -93,9 +109,10 @@ Reporting Fee Pool: <i>under construction</i>
 Reputation Token: <i>under construction</i>
 Smart Contract: <i>under construction</i>
 Settlement: <i>under construction</i>
+Settlement Fee: <i>under construction</i>
 Share: <i>under construction</i>
 Sibling Universe: |-
-  A sibling universe is each of <a href="#Child_Universe">child universes</a> having one <a href="#Parent_Universe">parent universe</a> in common.
+  A <a href="#Child_Universe">universe</a> that shares a <a href="#Parent_Universe">parent</a> with the universe in question.
   Sibling universes are entirely disjoint.
   For example, <a href="#Reputation_Token">REP</a> can be used to stake on <a href="#Outcome">outcomes</a> only for <a href="#Market">markets</a> that exist in the same <a href="#Universe">universe</a> as the REP.
   It cannot be used in another universe.
@@ -107,7 +124,24 @@ Trading Fee: <i>under construction</i>
 Transaction Fee: <i>under construction</i>
 Truth Universe: <i>under construction</i>
 Unfilled Order: <i>under construction</i>
-Universe: <i>under construction</i>
+Universe: |-
+  A universe acts like a container for the objects required for Auger to work, such as REP, markets, shares, and participation tokens, those objects belong to a universe.
+  The objects can be used only for the objects that exsit in the same universe.
+  For example, REP can be used to stake on outcomes only for markets that exist in the same universe as the REP.
+  It cannot be used in another universe.
+
+  When a market forked, new universes are spawned from the universe where the forking market exists.
+  The universe where the forking market exists is called parent universe, and spawned universes are called child universes. When a fork starts, the parent universe is locked permanently.
+  
+  Besides, new universe is created when the smart-contracts of Augur are updated.
+  When Augur launched on <a href="https://ethereum.org/ja/glossary/#mainnet" target="_blank">Ethereum Mainnet</a>, it had only one universe called <a href="#Genesis_Universe">genesis universe</a>, the version of this release is kown as Augur v1. After that, the smart-contracts were updated and new universe was created, the version of this release is known as Augur v2.
 Validity Bond: <i>under construction</i>
 Waiting For Window Phase: <i>under construction</i>
-Winning Universe: <i>under construction</i>
+Winning Universe: |- 
+  A kind of <a href="#Child_Universe">child universe</a>. The child universe that receives the most migrated <a href="#Reputation_Token">REP</a> from the <a href="#Parent_Universe">parent universe</a> by the end of a <a href="#Fork">fork</a> becomes the winning universe, the other child universes become the <a href="#Losing_Universe">losing universe</a>.
+  <br>
+  <br>
+  All markets in the parent universe can only be migrated to the winning universe and the objects attached to the <a href="#Forking_Market">forking market</a>, such as <a href="#Share">shares</a>, <a href="#Open_Interest">open interest</a>, unfilled orders, are also only migrated to the winning universe. (See <a href="/version2-english/9-fork/4-migration-of-the-objects.html" target="_blank">migration of the objects</a> for details.)
+  <br>
+  <br>
+  When the system is working correctly, and people are behaving economically rationally (profit motivated), the expectation is that the winning universe will align with the <a href="#Truth_Universe">truth universe</a>.
