@@ -112,13 +112,4 @@ Unfilled Order: <i>under construction</i>
 Universe: <i>under construction</i>
 Validity Bond: <i>under construction</i>
 Waiting For Window Phase: <i>under construction</i>
-Winning Universe: |- 
-  A kind of <a href="#Child_Universe">child universe</a>.
-  The child universe that receives the most migrated <a href="#Reputation_Token">REP</a> from the <a href="#Parent_Universe">parent universe</a> by the end of a <a href="#Fork">fork</a> becomes the winning universe, the other child universes become the <a href="#Losing_Universe">losing universe</a>.
-  <br>
-  <br>
-  All markets in the parent universe can only be migrated to the winning universe and the objects attached to the <a href="#Forking_Market">forking market</a>, such as <a href="#Share">shares</a>, <a href="#Open_Interest">open interest</a>, unfilled orders, are also only migrated to the winning universe.
-  (See <a href="/version2-english/9-fork/4-migration-of-the-objects.html" target="_blank">migration of the objects</a> for details.)
-  <br>
-  <br>
-  When the system is working correctly, and people are behaving economically rationally (profit motivated), the expectation is that the winning universe will align with the <a href="#Truth_Universe">truth universe</a>.
+Winning Universe: <i>under construction</i>
