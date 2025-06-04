@@ -1,6 +1,9 @@
 ---
 title: Check Sheet
 ---
+
+{% capture community_resources_link %}/{{page.collection}}/5-external-resources.html{% endcapture %}
+
 # Reporters: Check Sheet
 
 For determining which outcome is true, pay close attention to all of the market details. What is the resolution source?
@@ -19,4 +22,4 @@ The market should be considered INVALID if any of the following are true:
 - The resolution source does not provide a readily available answer.
 - The resolution source provides different answers to different viewers.
 
-Have you visited one of the [community resources]({{ "/" | absolute_url }}/{{page.collection}}/5-external-resources.html) for discussions on reporting Augur's markets? There might be something you are not considering.
+Have you visited one of the [community resources]({{ community_resources_link | relative_url }}) for discussions on reporting Augur's markets? There might be something you are not considering.

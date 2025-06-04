@@ -9,7 +9,7 @@
       {% comment %} In order to hide "posts", filtered by "diplay". (Because "posts" is included in "site.collections" by default.){% endcomment %}
       {% assign display_collections = site.collections | where: "top-page", true %}
       {% for collection in display_collections %}
-        <h2><a style="display: block" href="{{ "/" | absolute_url }}/{{collection.label}}">{{ collection.version }} ({{ collection.language }})</a></h2>
+        <h2><a style="display: block" href="{{ collection.label | relative_url }}">{{ collection.version }} ({{ collection.language }})</a></h2>
       {% endfor %}
     </div> 
     {% include google-analytics.html %}

@@ -2,15 +2,22 @@
 title: Market Types
 ---
 
+{% capture outcome_link %}/{{page.collection}}/7-glossary.html#Outcome{% endcapture %}
+{% capture order_book_link %}/{{page.collection}}/7-glossary.html#Order_Book{% endcapture %}
+{% capture examples_link %}/{{page.collection}}/2-market-creators/examples.html{% endcapture %}
+{% capture invalid_outcome_link %}/{{page.collection}}/7-glossary.html#Invalid_Outcome{% endcapture %}
+{% capture reporting_process_link %}/{{page.collection}}/4-reporters/1-reporting-process.html{% endcapture %}
+{% capture shares_link %}/{{page.collection}}/7-glossary.html#SHARE{% endcapture %}
+
 # Getting Started: Market Types
 
-There are three types of markets that can exist in Augur. They are Yes/No, Categorical, and Scalar. The main difference between them is the number of possible [outcomes]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#Outcome) (i.e. potential answers) which has implications on the number of [order books]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#Order_Book) and the complexity of trading. 
+There are three types of markets that can exist in Augur. They are Yes/No, Categorical, and Scalar. The main difference between them is the number of possible [outcomes]({{ outcome_link | relative_url }}) (i.e. potential answers) which has implications on the number of [order books]({{ order_book_link | relative_url }}) and the complexity of trading. 
 
-Examples of the different types of markets can be found on the [Examples]({{ "/" | absolute_url }}/{{page.collection}}/2-market-creators/examples.html) page.
+Examples of the different types of markets can be found on the [Examples]({{ examples_link | relative_url }}) page.
 
 ### A Word on "Invalid"
 
-For all of these markets types, [Invalid]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#Invalid_Outcome) is always an available outcome, but it is not explicitly tradeable (in version 1 of Augur). The Invalid result is used by reporters when the truthful answer was not apparent at the time the market entered the [reporting phase]({{ "/" | absolute_url }}/{{page.collection}}/4-reporters/1-reporting-process.html). If a market resolves as Invalid, market [SHARES]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#SHARE) are worth a specific amount based on the market type (examples will be described below). Unfortunately, due to technical limitations, Invalid markets cannot "unwind" trading so that traders receive the exact amount of money they paid for their shares.
+For all of these markets types, [Invalid]({{ invalid_outcome_link | relative_url }}) is always an available outcome, but it is not explicitly tradeable (in version 1 of Augur). The Invalid result is used by reporters when the truthful answer was not apparent at the time the market entered the [reporting phase]({{ reporting_process_link | relative_url }}). If a market resolves as Invalid, market [SHARES]({{ shares_link | relative_url }}) are worth a specific amount based on the market type (examples will be described below). Unfortunately, due to technical limitations, Invalid markets cannot "unwind" trading so that traders receive the exact amount of money they paid for their shares.
 
 ### Yes/No Markets
 
@@ -30,8 +37,8 @@ In the event that a categorical market resolves as Invalid, every SHARE is worth
 
 These are the most complicated markets to understand, but provide the most flexibility in the number of potential outcomes and how they are paid out. In the other two market types, only the one true outcome is worth any ETH once the market is finalized and valid. All the other outcomes are worth nothing, but that is not true for scalar markets. Since these are the most complicated to understand, it is probably best to avoid this kind of market until you are more comfortable with Augur.
 
-An example of a scalar market title would be “According to finance.yahoo.com, what will be the price of MSFT on January 3rd, 2020 at market close?”. In this example market, potential answers might range from $0 to $500, because a lower and upper bound are required to be defined when the market is created. In addition, the market creator had to specify the precision for the market, which determines how many individual price points are available as choices between $0 and $500. 
+An example of a scalar market title would be "According to finance.yahoo.com, what will be the price of MSFT on January 3rd, 2020 at market close?". In this example market, potential answers might range from $0 to $500, because a lower and upper bound are required to be defined when the market is created. In addition, the market creator had to specify the precision for the market, which determines how many individual price points are available as choices between $0 and $500. 
 
 A trader in this example would have to decide whether to go LONG (Buy) or SHORT (Sell) on this market, and at a specific price. The trader in a LONG position makes more money the higher the final result is above the specific price, and loses money if the final result is below the specific price. The opposite is true for the trader who took the SHORT position.
 
-In the case of Invalid, the final answer becomes the midpoint between the lower bound and upper bound. 
+In the case of Invalid, the final answer becomes the midpoint between the lower bound and upper bound.

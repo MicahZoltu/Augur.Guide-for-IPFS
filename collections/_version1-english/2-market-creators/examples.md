@@ -2,6 +2,13 @@
 title: Examples
 ---
 {% assign current_collection = site.collections | where: "label", page.collection | first %}
+
+{% capture categorical_market_link %}/{{page.collection}}/7-glossary.html#Categorical_Market{% endcapture %}
+{% capture end_time_link %}/{{page.collection}}/7-glossary.html#End_Time{% endcapture %}
+{% capture resolution_source_link %}/{{page.collection}}/7-glossary.html#Resolution_Source{% endcapture %}
+{% capture rep_link %}/{{page.collection}}/7-glossary.html#REP{% endcapture %}
+{% capture invalid_outcome_link %}/{{page.collection}}/7-glossary.html#Invalid_Outcome{% endcapture %}
+
 # Market Creators: Examples
 
 Here are a few examples of different markets that have been created in the past that are worded well to help ensure validity and clarity for traders and reporters. You can use these as templates to help you get started creating your own markets that are well crafted.
@@ -21,13 +28,13 @@ Here are a few examples of different markets that have been created in the past 
 
 The additional details of the market specify how certain edge cases should be treated. Different betting rules account for overtime in different ways, so it is good to spell it out here. 
 
-The market is [categorical]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#Categorical_Market) which allows for making a “draw” an explicit outcome, but the drawback here is that it splits liquidity between three outcomes. If that is a concern for you, it is possible to turn a sports market into a Yes/No market with wording like “Will team X beat team Y?”, as a draw would imply an answer of “No” - which could also be spelled out explicitly in the additional details of the market.
+The market is [categorical]({{ categorical_market_link | relative_url }}) which allows for making a "draw" an explicit outcome, but the drawback here is that it splits liquidity between three outcomes. If that is a concern for you, it is possible to turn a sports market into a Yes/No market with wording like "Will team X beat team Y?", as a draw would imply an answer of "No" - which could also be spelled out explicitly in the additional details of the market.
 
-The market [end time]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#End_Time) is also sufficiently after the event. A day after a sports game is typically enough time to know the result.
+The market [end time]({{ end_time_link | relative_url }}) is also sufficiently after the event. A day after a sports game is typically enough time to know the result.
 
 This particular market has low fees and easy to find categories and tags which makes it attractive for traders. The market creator has provided liquidity and hopes to make money through their spread.
 
-A [resolution source]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#Resolution_Source) of general knowledge is widely accepted to be satisfactory as there is almost never any ambiguity on who is the winner of a sports game, and it is typically widely reported on in the media. Putting in a specific resolution source would only increase the risk of having the market resolve as invalid, if something strange were to happen with that specific source.
+A [resolution source]({{ resolution_source_link | relative_url }}) of general knowledge is widely accepted to be satisfactory as there is almost never any ambiguity on who is the winner of a sports game, and it is typically widely reported on in the media. Putting in a specific resolution source would only increase the risk of having the market resolve as invalid, if something strange were to happen with that specific source.
 
 ### Politics
 
@@ -40,9 +47,9 @@ A [resolution source]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.ht
 **Categories/Tag:** Politics, Trump, 2020<br />
 **Resolution Source:** General Knowledge<br /> 
 
-**Notes:** Politics markets are also one of the easiest categories to make valid markets for, but a little harder than sports markets. The additional details for the market really need to spell out as many of the edge cases as possible, so knowledge of the political system the market is about is crucial. In addition, the market end time typically needs to be *well* after you expect the event to occur, because large delays are possible (ex. election results). This particular market’s end time is over a month after the expected election date. That being said, a resolution source won’t be needed (general knowledge is fine) because election results tend to not have any ambiguity once the answer is determined.
+**Notes:** Politics markets are also one of the easiest categories to make valid markets for, but a little harder than sports markets. The additional details for the market really need to spell out as many of the edge cases as possible, so knowledge of the political system the market is about is crucial. In addition, the market end time typically needs to be *well* after you expect the event to occur, because large delays are possible (ex. election results). This particular market's end time is over a month after the expected election date. That being said, a resolution source won't be needed (general knowledge is fine) because election results tend to not have any ambiguity once the answer is determined.
 
-In addition, for long running markets such as this one, additional risk factors start to come into play. Augur’s current design doesn’t make it well suited for markets that go out further than 6 months. One reason is that Augur expects to do contract upgrades which involves migrating [REP]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#REP) from one version to another, potentially leaving markets behind with not enough honest REP holders to report the correct result. The other reason is that long running markets potentially don’t end up paying a “fair” amount of reporting fees based on how long Augur is required to ensure the security of the market. This gets into complex game-theory topics that we won’t dive into here, see the [Augur Whitepaper]({{current_collection.whitepaper-pdf-url}}) for more details.
+In addition, for long running markets such as this one, additional risk factors start to come into play. Augur's current design doesn't make it well suited for markets that go out further than 6 months. One reason is that Augur expects to do contract upgrades which involves migrating [REP]({{ rep_link | relative_url }}) from one version to another, potentially leaving markets behind with not enough honest REP holders to report the correct result. The other reason is that long running markets potentially don't end up paying a "fair" amount of reporting fees based on how long Augur is required to ensure the security of the market. This gets into complex game-theory topics that we won't dive into here, see the [Augur Whitepaper]({{current_collection.whitepaper-pdf-url}}) for more details.
 
 ### Cryptocurrency
 
@@ -57,13 +64,13 @@ In addition, for long running markets such as this one, additional risk factors 
 
 **Notes:** Cryptocurrency price markets are popular for Augur since the user base tends to be heavily invested in cryptocurrency in general, at least for now. This type of market is a kind of binary option, which is the simplest type of cryptocurrency price market to create. A more complicated version of this market would be a scalar one, allowing for a numerical range of values for more complex trading.
 
-The one key parameter in this type of market that is unique compared to the ones above is the resolution source. Generally, cryptocurrency prices vary dramatically across the world on different exchanges. There is no single default source of truth that is generally agreed upon, so you have to pick one for the market. Otherwise you could end up in a situation where one exchange would make the answer resolve to “Yes”, whereas another exchange might make the answer “No” - this sort of conflict would make the market resolve as [Invalid]({{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html#Invalid_Outcome).
+The one key parameter in this type of market that is unique compared to the ones above is the resolution source. Generally, cryptocurrency prices vary dramatically across the world on different exchanges. There is no single default source of truth that is generally agreed upon, so you have to pick one for the market. Otherwise you could end up in a situation where one exchange would make the answer resolve to "Yes", whereas another exchange might make the answer "No" - this sort of conflict would make the market resolve as [Invalid]({{ invalid_outcome_link | relative_url }}).
 
 When you start to rely on only one resolution source, other problems do arise. For example, what if Coinmarketcap.com ceases to exist by the time your market expires? You could put backup resolution sources in the additional details section of the market, but then you need to clearly define when the backup source should be used - which can cause greater uncertainty itself. 
 
-Not all resolution sources are equal either. You generally want to pick a resolution source that stores historical information rather than just a snapshot in time. Future traders and reporters need to be able to check the resolution source well *after* the event to determine what the correct answer was. It gets a lot harder to determine that if the snapshot has changed, which greatly increases the chances of the market resolving as Invalid. Tools such as web.archive.org are sometimes used to save those “snapshots” for later retrieval as evidence. How to treat specific resolution sources is still an open topic in Augur, so greater care should be taken as there are additional risks that your market may not resolve the way you intended it to.
+Not all resolution sources are equal either. You generally want to pick a resolution source that stores historical information rather than just a snapshot in time. Future traders and reporters need to be able to check the resolution source well *after* the event to determine what the correct answer was. It gets a lot harder to determine that if the snapshot has changed, which greatly increases the chances of the market resolving as Invalid. Tools such as web.archive.org are sometimes used to save those "snapshots" for later retrieval as evidence. How to treat specific resolution sources is still an open topic in Augur, so greater care should be taken as there are additional risks that your market may not resolve the way you intended it to.
 
-For what it’s worth, coinmarketcap.com has been generally accepted as one of the best resolution source for cryptocurrency price markets, although there are others as well.
+For what it's worth, coinmarketcap.com has been generally accepted as one of the best resolution source for cryptocurrency price markets, although there are others as well.
 
 ### Weather
 
@@ -117,4 +124,4 @@ The second paragraph of the "details" section is actually automatically added in
 **Categories/Tag:** Space, Spacex, Mars<br />
 **Resolution Source:** General Knowledge<br />
 
-**Notes:** This market is just a good example of how awesome Augur can be, because you can create markets about almost anything. As usual, the additional details section is critical to add additional context and to cover any potential edge cases that could come up. This market had a very low probability of resolving as Invalid, but it wasn’t entirely zero. There could have been uncertainty if the rocket had only reached an elevation of 0.9 meters, for example. It may have been unclear to the general public how high the rocket actually went. Enough clarity of intent in the market details allows for a large reduction in the probability of an Invalid market.
+**Notes:** This market is just a good example of how awesome Augur can be, because you can create markets about almost anything. As usual, the additional details section is critical to add additional context and to cover any potential edge cases that could come up. This market had a very low probability of resolving as Invalid, but it wasn't entirely zero. There could have been uncertainty if the rocket had only reached an elevation of 0.9 meters, for example. It may have been unclear to the general public how high the rocket actually went. Enough clarity of intent in the market details allows for a large reduction in the probability of an Invalid market.

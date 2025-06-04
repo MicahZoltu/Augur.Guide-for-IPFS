@@ -2,7 +2,7 @@
 title: Fork
 ---
 
-{% capture fork_dir %}{{ "/" | absolute_url }}{{page.collection}}/9-fork/{% endcapture %}
+{% capture fork_dir %}/{{page.collection}}/9-fork/{% endcapture %}
 {% assign url_basic_knowledge = fork_dir | append: '1-basic-knowledge.html' %}
 {% assign url_todos = fork_dir | append: '2-to-dos.html' %}
 {% assign url_restrictions_on_use = fork_dir | append: '3-restrictions-on-use.html' %}
@@ -15,9 +15,9 @@ Some people call it Augur's last resort, some call it a nuclear weapon, some cal
 The purpose of this section is to get a good understanding of a fork and prepare for it.
 
 The contents are:
- - [Basic knowledge]({{ url_basic_knowledge }})
- - [To-do's]({{ url_todos }})
- - [Restrictions on use]({{ url_restrictions_on_use }})
- - [Migration of the objects]({{ url_migration_of_the_objects }})
+ - [Basic knowledge]({{ url_basic_knowledge | relative_url }})
+ - [To-do's]({{ url_todos | relative_url }})
+ - [Restrictions on use]({{ url_restrictions_on_use | relative_url }})
+ - [Migration of the objects]({{ url_migration_of_the_objects | relative_url }})
 
-If you are a biginner, you should start with [basic knowledge]({{ url_basic_knowledge }}). If you are a REP holder, you must read [to-do's]({{ url_todos }}) to not lose the value of your REP. And if you want to do a deep dive into a fork, check [restrictions on use]({{ url_restrictions_on_use }}) and [migration of the objects]({{ url_migration_of_the_objects }}).
+If you are a biginner, you should start with [basic knowledge]({{ url_basic_knowledge | relative_url }}). If you are a REP holder, you must read [to-do's]({{ url_todos | relative_url }}) to not lose the value of your REP. And if you want to do a deep dive into a fork, check [restrictions on use]({{ url_restrictions_on_use | relative_url }}) and [migration of the objects]({{ url_migration_of_the_objects | relative_url }}).

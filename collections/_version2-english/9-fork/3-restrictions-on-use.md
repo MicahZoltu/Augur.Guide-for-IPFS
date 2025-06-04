@@ -2,11 +2,11 @@
 title: Restrictions on use
 ---
 
-{% capture fork_dir %}{{ "/" | absolute_url }}{{page.collection}}/9-fork/{% endcapture %}
+{% capture fork_dir %}/{{page.collection}}/9-fork/{% endcapture %}
 {% assign url_to_dos = fork_dir | append: '2-to-dos.html' %}
 {% assign url_migration_of_the_objects = fork_dir | append: '4-migration-of-the-objects.html' %}
 
-{% capture glossary_path %}{{ "/" | absolute_url }}/{{page.collection}}/7-glossary.html{% endcapture %}
+{% capture glossary_path %}/{{page.collection}}/7-glossary.html{% endcapture %}
 {% assign glossary_child_universe = glossary_path | append: '#Child_Universe' %}
 {% assign glossary_creator_fee = glossary_path | append: '#Creator_Fee' %}
 {% assign glossary_finalized_market = glossary_path | append: '#Finalized_Market' %}
@@ -31,10 +31,10 @@ The [whitepaper](https://github.com/AugurProject/whitepaper/blob/master/v2/engli
 
 > When a fork is initiated, the parent universe becomes permanently locked. In a locked universe, no new markets may be created and no REP can be staked on any market. Therefore markets in a locked universe cannot be finalized. However, users may continue trading shares in markets in locked universes. In order for markets or REP tokens in the locked universe to be useful, they must first be migrated to a child universe.
 
-Then, what is a [locked universe]({{glossary_locked_universe}})? And what can users do in the [parent universe]({{glossary_parent_universe}}) and [child universes]({{glossary_child_universe}}) specifically? The purpose of this page is to clear up those questions.
+Then, what is a [locked universe]({{ glossary_locked_universe | relative_url }})? And what can users do in the [parent universe]({{ glossary_parent_universe | relative_url }}) and [child universes]({{ glossary_child_universe | relative_url }}) specifically? The purpose of this page is to clear up those questions.
 
 ## Summary
-From a conclusion, when a [fork]({{glossary_fork}}) starts, in the [parent universe]({{glossary_parent_universe}}), [REP]({{glossary_reputation_token}}) cannot be staked on any [market]({{glossary_market}}) and markets cannot be [finalized]({{glossary_finalized_market}}), in addition to that, new markets cannot be created. And REP holders can migrate their REP from the parent universe to a [child universe]({{glossary_child_universe}}) only during the fork.
+From a conclusion, when a [fork]({{ glossary_fork | relative_url }}) starts, in the [parent universe]({{ glossary_parent_universe | relative_url }}), [REP]({{ glossary_reputation_token | relative_url }}) cannot be staked on any [market]({{ glossary_market | relative_url }}) and markets cannot be [finalized]({{ glossary_finalized_market | relative_url }}), in addition to that, new markets cannot be created. And REP holders can migrate their REP from the parent universe to a [child universe]({{ glossary_child_universe | relative_url }}) only during the fork.
 
 On the other hand, in child universes, users can do anything right after it is created.
 <table>
@@ -142,20 +142,20 @@ On the other hand, in child universes, users can do anything right after it is c
 Now let's break it down into each phase and see more details.
 
 ## Before a Fork Starts
-Before a [fork]({{glossary_fork}}), there are no restrictions in the [parent universe]({{glossary_parent_universe}}), however REP cannot be migrated since a fork has not started. And [child universes]({{glossary_child_universe}}) are not yet created at this point.
+Before a [fork]({{ glossary_fork | relative_url }}), there are no restrictions in the [parent universe]({{ glossary_parent_universe | relative_url }}), however REP cannot be migrated since a fork has not started. And [child universes]({{ glossary_child_universe | relative_url }}) are not yet created at this point.
 
 ## During a Fork
-"During a fork" means "during the [forking period]({{glossary_forking_period}})". Only during this period, REP in the [parent universe]({{glossary_parent_universe}}) can be migrated to one of the [child universes]({{glossary_child_universe}}) (See [to-do's]({{url_to_dos}}#after-starting-a-fork-60-days) for details). REP holders cannot stake [REP]({{glossary_reputation_token}}) on any [market]({{glossary_market}}) in the parent universe, since REP in the parent universe needs to be migrated. Therefore, markets in the parent universe are never [finalized]({{glossary_finalized_market}}). And users may not create new markets in the parent univese after a fork starts.
+"During a fork" means "during the [forking period]({{ glossary_forking_period | relative_url }})". Only during this period, REP in the [parent universe]({{ glossary_parent_universe | relative_url }}) can be migrated to one of the [child universes]({{ glossary_child_universe | relative_url }}) (See [to-do's]({{ url_to_dos | relative_url }}#after-starting-a-fork-60-days) for details). REP holders cannot stake [REP]({{ glossary_reputation_token | relative_url }}) on any [market]({{ glossary_market | relative_url }}) in the parent universe, since REP in the parent universe needs to be migrated. Therefore, markets in the parent universe are never [finalized]({{ glossary_finalized_market | relative_url }}). And users may not create new markets in the parent univese after a fork starts.
 
-Even if a market in the parent universe has not been migrated to the [winning universe]({{glossary_winning_universe}}), users may trade and [settle]({{glossary_settlement}}) their [shares]({{glossary_share}}) on the market. It does not matter whether the market is already finalized or not, users can do those on any market in the parent universe. Trading in the parent universe, traders pay [creator fee]({{glossary_creator_fee}}) and [reporting fee]({{glossary_reporting_fee}}), and those fees are added to [reporting fee pool]({{glossary_reporting_fee_pool}}). Users may redeem their [participation tokens]({{glossary_participation_token}}) but may not purchase them, since participation tokens are purchased in exchage for REP but those REP need to be migrated to a child universe.
+Even if a market in the parent universe has not been migrated to the [winning universe]({{ glossary_winning_universe | relative_url }}), users may trade and [settle]({{ glossary_settlement | relative_url }}) their [shares]({{ glossary_share | relative_url }}) on the market. It does not matter whether the market is already finalized or not, users can do those on any market in the parent universe. Trading in the parent universe, traders pay [creator fee]({{ glossary_creator_fee | relative_url }}) and [reporting fee]({{ glossary_reporting_fee | relative_url }}), and those fees are added to [reporting fee pool]({{ glossary_reporting_fee_pool | relative_url }}). Users may redeem their [participation tokens]({{ glossary_participation_token | relative_url }}) but may not purchase them, since participation tokens are purchased in exchage for REP but those REP need to be migrated to a child universe.
 <br>
-**Note:** Regarding the pooled fees, there is unfortunately a problem. Because [settlement fees]({{glossary_settlement_fee}}) for markets that finalized prior to the fork will go to the reporting fee pool on the parent universe and if all honest REP migrates to a child universe during the fork, all of those fees will be stuck in the parent universe.
+**Note:** Regarding the pooled fees, there is unfortunately a problem. Because [settlement fees]({{ glossary_settlement_fee | relative_url }}) for markets that finalized prior to the fork will go to the reporting fee pool on the parent universe and if all honest REP migrates to a child universe during the fork, all of those fees will be stuck in the parent universe.
 
-In child universes, there are no restrictions. It doesn't matter whether a child universe is [winning]({{glossary_winning_universe}}) one or [losing]({{glossary_losing_universe}}) one. You can do everything on it as soon as it is created.
+In child universes, there are no restrictions. It doesn't matter whether a child universe is [winning]({{ glossary_winning_universe | relative_url }}) one or [losing]({{ glossary_losing_universe | relative_url }}) one. You can do everything on it as soon as it is created.
 <br>
-**Note:** child universes are not created as soon as a fork starts, they are created when the first time REP is migrated to them (See [migration of the objects]({{url_migration_of_the_objects}}#forking-market) for details).
+**Note:** child universes are not created as soon as a fork starts, they are created when the first time REP is migrated to them (See [migration of the objects]({{ url_migration_of_the_objects | relative_url }}#forking-market) for details).
 
 ## After a Fork Ends
-After the [forking period]({{glossary_forking_period}}), what users can do in the [parent universe]({{glossary_parent_universe}}) is the same as during the forking period except that REP holders cannot migrate their REP to any [child universe]({{glossary_child_universe}}).
+After the [forking period]({{ glossary_forking_period | relative_url }}), what users can do in the [parent universe]({{ glossary_parent_universe | relative_url }}) is the same as during the forking period except that REP holders cannot migrate their REP to any [child universe]({{ glossary_child_universe | relative_url }}).
 
-In [child universes]({{glossary_child_universe}}), continuing from during the forking period, there are no restrictions.
+In [child universes]({{ glossary_child_universe | relative_url }}), continuing from during the forking period, there are no restrictions.

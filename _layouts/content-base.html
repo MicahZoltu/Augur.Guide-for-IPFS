@@ -7,7 +7,7 @@
         {% assign current_collection = site.collections | where: "label", page.collection | first %}
         <div class="center">
           {% include logo-title.html %}
-          <h3 class="no-anchor"><a href="{{ "/" | absolute_url }}{{ page.collection }}">for {{ current_collection.version }}</a></h3>
+          <h3 class="no-anchor"><a href="{{ page.collection | relative_url }}">for {{ current_collection.version }}</a></h3>
         </div>
         <div id="navcontainer">
           {% include navigation.html max_depth=3 selected_docs=current_collection.docs %}
@@ -30,10 +30,9 @@
 
       </section>
     </div>
-    {% include google-analytics.html %}
   </body>
-  <script type="text/javascript" src="{{ "/" | absolute_url }}/assets/js/getLastUpdateDate.js" page_path="{{page.path}}"></script>
-  <script type="text/javascript" src="{{ "/" | absolute_url }}/assets/js/addAnchorLinkToHeader.js"></script>
+  <script type="text/javascript" src="{{ "/assets/js/getLastUpdateDate.js" | relative_url }}" page_path="{{page.path}}"></script>
+  <script type="text/javascript" src="{{ "/assets/js/addAnchorLinkToHeader.js" | relative_url }}"></script>
   <script>
 
 
