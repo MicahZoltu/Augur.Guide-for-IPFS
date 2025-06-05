@@ -4,7 +4,7 @@
   <body>
     <div class="center">
       {% include logo-title.html %}
-      <p>{{ site.description | default: site.github.project_tagline }}</p>
+      <p>{{ site.description }}</p>
       
       {% comment %} In order to hide "posts", filtered by "diplay". (Because "posts" is included in "site.collections" by default.){% endcomment %}
       {% assign display_collections = site.collections | where: "top-page", true %}

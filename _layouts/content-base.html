@@ -18,20 +18,9 @@
 
         {{ content }}
 
-        <div class="right">
-          <p id="last_update_datetime"></p>
-
-          {% comment %}
-            Don't use "github_edit_link" to generate a URL to link to the github edit page. Because this variable does not include the path which is defined by "collections_dir". 
-          {% endcomment %}
-          <a href="{{ site.github.repository_url }}/edit/master/{{site.collections_dir}}/{{ page.relative_path }}">> Improve this page</a>
-
-        </div>
-
       </section>
     </div>
   </body>
-  <script type="text/javascript" src="{{ "/assets/js/getLastUpdateDate.js" | relative_url }}" page_path="{{page.path}}"></script>
   <script type="text/javascript" src="{{ "/assets/js/addAnchorLinkToHeader.js" | relative_url }}"></script>
   <script>
 
