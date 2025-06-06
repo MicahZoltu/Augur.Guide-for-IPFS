@@ -1,10 +1,8 @@
 import * as BaseElements from "./baseElements.js";
 import * as Url from "./url.js";
 
-const AugurFaviconPath =
-  `{{ "assets/images/favicons/augur-icon-36x36.png" | relative_url }}`;
-const IpfsFaviconPath =
-  `{{ "assets/images/favicons/ipfs-icon-36x36.png" | relative_url }}`;
+const AugurFaviconPath = "../../../images/favicons/augur-icon-36x36.png";
+const IpfsFaviconPath = "../../../images/favicons/ipfs-icon-36x36.png";
 
 export function create(arrReleaseData) {
   let tbl = document.getElementById("official-release-table");
