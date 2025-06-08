@@ -1,401 +1,197 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-  <title>Augur.Guide | A friendly user guide to the prediction market protocol owned and operated by the people that use it.</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  
-  <!-- favicon package -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicons/favicon-16x16.png">
-  <link rel="manifest" href="../../assets/images/favicons/site.webmanifest">
-  <link rel="mask-icon" href="../../assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="../../assets/images/favicons/favicon.ico">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-config" content="../../assets/images/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
-  <script src="../../assets/js/anchor.min.js"></script>
-  <script type="text/javascript" src="../../assets/js/content-hash.min.js"></script>
+
+<head>
+	<title>Augur.Guide | A friendly user guide to the prediction market protocol owned and operated by the people that use it.</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../assets/css/style.css">
+	<!-- favicon package -->
+	<link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicons/favicon-16x16.png">
+	<link rel="manifest" href="../../assets/images/favicons/site.webmanifest">
+	<link rel="mask-icon" href="../../assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="../../assets/images/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="../../assets/images/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<script src="../../assets/js/anchor.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/content-hash.min.js"></script>
 </head>
 
-  <body>
-    <div class="wrapper">
-      <header>
-        
-        <div class="center">
-          <a href="../../index.html"><img src="../../assets/images/logos/Augur.Guide-Logo-96x96.png" alt="Logo" /></a>      
-<h1 class="no-anchor"><a href="../../index.html">Augur.Guide</a></h1>
-          <h3 class="no-anchor"><a href="../../version2-english/index.html">for version2</a></h3>
-        </div>
-        <div id="navcontainer">
-          
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="center">
+				<a href="../../index.html"><img src="../../assets/images/logos/Augur.Guide-Logo-96x96.png" alt="Logo" /></a>
+				<h1 class="no-anchor"><a href="../../index.html">Augur.Guide</a></h1>
+				<h3 class="no-anchor"><a href="../../version2-english/index.html">for version2</a></h3>
+			</div>
+			<div id="navcontainer">
+				<ul>
+					<li class="page-link">
+						<a href="../../version2-english/7-glossary.html">Glossary</a>
+					</li>
+					<li class="page-link">
+						<a href="../../version2-english/8-augur-ui.html">Augur UI</a>
+					</li>
+					<li class="page-link">
+						<a href="../../version2-english/9-fork.html">Fork</a>
+						<ul>
+							<li class="page-link">
+								<a href="../../version2-english/9-fork/1-basic-knowledge.html">Basic knowledge</a>
+							</li>
+							<li class="page-link">
+								<a href="../../version2-english/9-fork/2-to-dos.html">To-do's</a>
+							</li>
+							<li class="page-link">
+								<a href="../../version2-english/9-fork/3-restrictions-on-use.html">Restrictions on use</a>
+							</li>
+							<li class="page-link">
+								<a href="../../version2-english/9-fork/4-migration-of-the-objects.html">Migration of the objects</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<br />
+		</header>
+		<section>
+			<h1 id="migratable-objects-in-augur">Migratable objects in Augur</h1>
+			<p>This page covers the details of what objects in the Augur system of <a href="../../version2-english/7-glossary.html#Smart_Contract">contracts</a> are migratable between <a href="../../version2-english/7-glossary.html#Parent_Universe">parent</a> and <a href="../../version2-english/7-glossary.html#Child_Universe">child universes</a>. However <em>all</em> objects are not covered on this page, but only those that are likely to directly affect end users.</p>
+			<h1 id="hierarchical-relationships-between-objects">Hierarchical Relationships between Objects</h1>
+			<p>The objects in the <a href="../../version2-english/7-glossary.html#Universe">universe</a> form a hierarchical relationship with the universe as a top.</p>
+			<div class="center">
+				<a href="../../assets/images/version2-english/fork/migration-of-the-objects/relationships-between-objects.svg" target="_blank">
+					<img src="../../assets/images/version2-english/fork/migration-of-the-objects/relationships-between-objects.svg" />
+				</a>
+				<figcaption><i>Figure 1. hierarchical relationships between objects</i></figcaption>
+			</div>
+			<p>The universe has <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a>, <a href="../../version2-english/7-glossary.html#Market">Market</a>, and <a href="../../version2-english/7-glossary.html#Dispute_Window">Dispute Window</a> attached. And Market and Dispute Window have some attached objects, while REP doesn’t have any attached object. The point is that <strong>when forks occur, the lower objects migrate where their upper object migrates, and if the upper object may not migrate then their lower objects may not migrate</strong>. Of course, there are some exceptions, but this principle might help you understand the migration of the objects.</p>
+			<h1 id="overview">Overview</h1>
+			<p>The following figure shows where the objects in the <a href="../../version2-english/7-glossary.html#Parent_Universe">parent universe</a> are migrated after a fork. (Click to enlarge)</p>
+			<div class="center">
+				<a href="../../assets/images/version2-english/fork/migration-of-the-objects/outline.svg" target="_blank">
+					<img src="../../assets/images/version2-english/fork/migration-of-the-objects/outline.svg" />
+				</a>
+				<figcaption><i>Figure 2. overview of migration</i></figcaption>
+			</div>
+			<p>The red objects can only be migrated to the <a href="../../version2-english/7-glossary.html#Winning_Universe">winning universe</a>, the blues can only be migrated to the <a href="../../version2-english/7-glossary.html#Losing_Universe">losing universe</a>, the purples can be migrated to one of the <a href="../../version2-english/7-glossary.html#Child_Universe">child universes</a>, and the greens cannot be migrated to any child universe.</p>
+			<p>Before a <a href="../../version2-english/7-glossary.html#Fork">fork</a>, all objects are in the parent universe. After a fork, in the parent universe, there are the <a href="../../version2-english/7-glossary.html#Finalized_Market">finalized markets</a>, <a href="../../version2-english/7-glossary.html#Dispute_Window">dispute windows</a>, and the objects which are attached to them. The winning universe and the losing universe are created, and the <a href="../../version2-english/7-glossary.html#Forking_Market">forking market</a>, <a href="../../version2-english/7-glossary.html#Non-Finalized_Market">non-finalized markets</a>, and <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> are migrated to them.</p>
+			<p>This can be summarized as follows:</p>
+			<ul>
+				<li>The migratable objects are:
+					<ul>
+						<li>Forking market</li>
+						<li>Non-Finalized Markets</li>
+						<li>REP</li>
+					</ul>
+				</li>
+				<li>The un-migratable objects are:
+					<ul>
+						<li>Finalized Markets</li>
+						<li>Dispute Windows</li>
+					</ul>
+				</li>
+				<li>The winning universe receives:
+					<ul>
+						<li>Forking market and its attached objects</li>
+						<li>Non-Finalized markets</li>
+						<li>REP</li>
+					</ul>
+				</li>
+				<li>The losing universe receives:
+					<ul>
+						<li>Forking market</li>
+						<li>REP</li>
+					</ul>
+				</li>
+			</ul>
+			<h1 id="child-universe-is-created-by-rep-holders">Child universe is created by REP holders</h1>
+			<p>A <a href="../../version2-english/7-glossary.html#Child_Universe">child universe</a> is created when the <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> holder who <em>first</em> migrates their REP to it. Even if the <a href="../../version2-english/7-glossary.html#Forking_Market">forking market</a> has <a href="../../version2-english/7-glossary.html#Finalized_Market">finalized</a> or the <a href="../../version2-english/7-glossary.html#Forking_Period">forking period</a> ends, the <a href="../../version2-english/7-glossary.html#Child_Universe">child universe</a> is not created without migrating REP. And the REP holder who <em>first</em> migrates their REP has to pay not only the <a href="../../version2-english/7-glossary.html#Transaction_Fee">transaction fee</a> of migrating their REP, but also the transaction fee of creating the child universe.</p>
+			<h1 id="migration-of-forking-market">Migration of Forking Market</h1>
+			<div class="center">
+				<a href="../../assets/images/version2-english/fork/migration-of-the-objects/forking-market.svg" target="_blank">
+					<img src="../../assets/images/version2-english/fork/migration-of-the-objects/forking-market.svg" />
+				</a>
+				<figcaption><i>Figure 3. migration of forking market</i></figcaption>
+			</div>
+			<h2 id="market-itself">Market Itself</h2>
+			<p>The <a href="../../version2-english/7-glossary.html#Forking_Market">forking market</a> is duplicated in each <a href="../../version2-english/7-glossary.html#Child_Universe">child universe</a>. In a child universe, the forking market is <a href="../../version2-english/7-glossary.html#Finalized_Market">finalized</a> as the <a href="../../version2-english/7-glossary.html#Outcome">outcome</a> that aligns with that particular child universe. (See <a href="../../version2-english/9-fork/1-basic-knowledge.html#what-happens-when-a-fork-starts">basic knowledge</a> for details on how child universes are created.)</p>
+			<p>This duplication occurs when the child universe is created. This happens when the <em>first</em> <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> holder migrates their REP to that child universe.</p>
+			<h2 id="staked-rep">Staked REP</h2>
+			<p>The staked <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> on any <a href="../../version2-english/7-glossary.html#Outcome">outcome</a> of the <a href="../../version2-english/7-glossary.html#Forking_Market">forking market</a> is migrated to the <a href="../../version2-english/7-glossary.html#Child_Universe">child universe</a> corresponding to the staked outcome.</p>
+			<p>That REP will be unstaked and refunded to their owners in a child universe when the migration has done. They will also receive a 40% <a href="../../version2-english/7-glossary.html#ROI">ROI</a> in additional REP minted in the universe they staked on prior to the fork.</p>
+			<h2 id="attached-objects">Attached Objects</h2>
+			<p>The objects which are attached to the <a href="../../version2-english/7-glossary.html#Forking_Market">forking market</a> are:</p>
+			<ul>
+				<li><a href="../../version2-english/7-glossary.html#Share">share</a></li>
+				<li><a href="../../version2-english/7-glossary.html#Unfilled_Order">unfilled order</a></li>
+				<li><a href="../../version2-english/7-glossary.html#Creator_Fee">creator fee</a></li>
+				<li><a href="../../version2-english/7-glossary.html#Validity_Bond">validity bond</a></li>
+			</ul>
+			<p>When the for is <a href="../../version2-english/7-glossary.html#Finalized_Market">finalized</a>, those objects are migrated to the <a href="../../version2-english/7-glossary.html#Winning_Universe">winning universe</a> by the Augur contracts automatically.</p>
+			<p>Regarding <a href="../../version2-english/7-glossary.html#Validity_Bond">validity bond</a>, which is paid by the <a href="../../version2-english/7-glossary.html#Market_Creator">market creator</a> when creating the <a href="../../version2-english/7-glossary.html#Market">market</a>, if the corresponding outcome of the winning universe is <code class="language-plaintext highlighter-rouge">Invalid</code>, this bond is paid out to <a href="../../version2-english/7-glossary.html#Participation_Token">participation token</a> holders in proportion to the amount of participation token in the winning universe. If not <code class="language-plaintext highlighter-rouge">Invalid</code>, this bond is returned to the market creator in the winning universe.</p>
+			<p>As to <a href="../../version2-english/7-glossary.html#Creation_Bond">creation bond</a>, which is also paid by the market creator, no longer exists at the time of forking. Since this bond is already used by the <a href="../../version2-english/7-glossary.html#Designated_Reporter">designated reporter</a> or the first public reporter as the <a href="../../version2-english/7-glossary.html#Initial_Reporter">initial reporter</a>’s stake after the market’s <a href="../../version2-english/7-glossary.html#End_Time">event end time</a>.</p>
+			<h1 id="migration-of-non-forking-markets-not-finalized">Migration of Non-Forking Markets (not finalized)</h1>
+			<div class="center">
+				<a href="../../assets/images/version2-english/fork/migration-of-the-objects/non-forking-market.svg" target="_blank">
+					<img src="../../assets/images/version2-english/fork/migration-of-the-objects/non-forking-market.svg" />
+				</a>
+				<figcaption><i>Figure 4. migration of non-forking markets (not finalized)</i></figcaption>
+			</div>
+			<h2 id="market-itself-1">Market Itself</h2>
+			<p>The non-forking markets which are not <a href="../../version2-english/7-glossary.html#Finalized_Market">finalized</a> can be migrated only to the <a href="../../version2-english/7-glossary.html#Winning_Universe">winning universe</a>. To migrate those markets, you need to make a transaction for that explicitly. It can be done by anyone, not just the <a href="../../version2-english/7-glossary.html#Market_Creator">market creator</a>, and anytime after finalizing the <a href="../../version2-english/7-glossary.html#Forking_Market">forking market</a>. It is one-way and cannot be reversed.</p>
+			<p>When you migrate a market, you need to supply <a href="../../version2-english/7-glossary.html#Creation_Bond">creation bond</a> (which is normally paid by the market creator when creating the market) and you become the <a href="../../version2-english/7-glossary.html#Initial_Reporter">initial reporter</a> of the market in the <a href="../../version2-english/7-glossary.html#Winning_Universe">winning universe</a>. And if the market is past its <a href="../../version2-english/7-glossary.html#End_Time">event end time</a> in the <a href="../../version2-english/7-glossary.html#Parent_Universe">parent universe</a>, the market is reset back to needing an <a href="../../version2-english/7-glossary.html#Initial_Report">initial reporting</a>, and you need to submit the initial report for the market. At this time, the creation bond that you supplied when you migrate a market is used as the initial reporter’s stake.</p>
+			<p>The reason for this is that all of the <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> locked in the non-forking markets in the parent universe is refunded to its respective owners when a <a href="../../version2-english/7-glossary.html#Fork">fork</a> starts (so that they migrate their REP to a <a href="../../version2-english/7-glossary.html#Child_Universe">child universe</a> during the <a href="../../version2-english/7-glossary.html#Forking_Period">forking period</a>), the first reporter must cover the first report REP costs themselves.</p>
+			<p>The migration of the non-forking markets is not mandatory. Even if a fork ends, you can still trade and <a href="../../version2-english/7-glossary.html#Settlement">settle</a> your <a href="../../version2-english/7-glossary.html#Share">shares</a> on the markets in the parent universe (See <a href="../../version2-english/9-fork/3-restrictions-on-use.html">restrictons on use</a> for details). However, after a fork starts, markets in the parent universe cannot be <a href="../../version2-english/7-glossary.html#Finalized_Market">finalized</a>. For the market to be finalized, you need to migrate it to the winning universe.</p>
+			<p>The migration of the non-forking markets can be done by anyone who wants to, but especially the <a href="../../version2-english/7-glossary.html#Market_Creator">market creator</a> and the traders who have <a href="../../version2-english/7-glossary.html#Share">shares</a> in the market may want to do. Since for the market creator to receive the creator fees and for the traders to claim a payout of their shares, the market needs to be finalized (However creator fees are forfeit in <a href="../../version2-english/7-glossary.html#Invalid_Outcome">invalid</a> markets). It might give them an incentive to migrate markets.</p>
+			<h2 id="staked-rep-1">Staked REP</h2>
+			<p>When a <a href="../../version2-english/7-glossary.html#Fork">fork</a> starts, all staked <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> on the non-forking markets are un-staked and refunded to REP holders who staked it so that they migrate their REP during the <a href="../../version2-english/7-glossary.html#Forking_Period">forking period</a>.</p>
+			<h2 id="attached-objects-1">Attached Objects</h2>
+			<p>The objects which are attached to the non-forking market are:</p>
+			<ul>
+				<li><a href="../../version2-english/7-glossary.html#Share">share</a></li>
+				<li><a href="../../version2-english/7-glossary.html#Unfilled_Order">unfilled order</a></li>
+				<li><a href="../../version2-english/7-glossary.html#Creator_Fee">creator fee</a></li>
+				<li><a href="../../version2-english/7-glossary.html#Validity_Bond">validity bond</a></li>
+			</ul>
+			<p>Those objects go where the market goes, they cannot be migrated separately.</p>
+			<p><a href="../../version2-english/7-glossary.html#Creation_Bond">Creation bond</a>, which is paid by the <a href="../../version2-english/7-glossary.html#Market_Creator">market creator</a> when creating the market in the <a href="../../version2-english/7-glossary.html#Parent_Universe">parent universe</a>, is refunded to either the market creator or the <a href="../../version2-english/7-glossary.html#Initial_Reporter">initial reporter</a>. At the time of starting a <a href="../../version2-english/7-glossary.html#Fork">fork</a>, if the market has not received an <a href="../../version2-english/7-glossary.html#Initial_Report">initial reporting</a>, this bond is refunded to the market creator. If it already has received the initial report, then it refunds the <a href="../../version2-english/7-glossary.html#Initial_Report">initial reporter</a>. Because “received the initial reporting” means that the creation bond is already used by the initial reporter as the initial reporter’s stake.</p>
+			<h1 id="migration-of-rep-in-wallet">Migration of REP in Wallet</h1>
+			<div class="center">
+				<a href="../../assets/images/version2-english/fork/migration-of-the-objects/rep-in-wallet.svg" target="_blank">
+					<img src="../../assets/images/version2-english/fork/migration-of-the-objects/rep-in-wallet.svg" />
+				</a>
+				<figcaption><i>Figure 5. migration of REP in wallet</i></figcaption>
+			</div>
+			<p>All <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> in the <a href="../../version2-english/7-glossary.html#Parent_Universe">parent universe</a> that are <em>not</em> staked on any <a href="../../version2-english/7-glossary.html#Outcome">outcome</a> of the <a href="../../version2-english/7-glossary.html#Forking_Market">forking market</a> can be migrated to one of the <a href="../../version2-english/7-glossary.html#Child_Universe">child universes</a> by their owner. The migration of REP must be done during the <a href="../../version2-english/7-glossary.html#Forking_Period">forking period</a> which lasts 60 days after the <a href="../../version2-english/7-glossary.html#Fork">fork</a> starts. After the forking period, the REP in the parent universe can never be migrated to any child universe (See <a href="../../version2-english/9-fork/2-to-dos.html">to-do’s</a> for details).</p>
+			<p>If you are the first person to migrate REP to a <a href="../../version2-english/7-glossary.html#Child_Universe">child universe</a>, child universe creation is triggered and the forking market is also copied into it. In this case, you have to pay the <a href="../../version2-english/7-glossary.html#Transaction_Fee">transaction fee</a> not only for migrating your REP but also for creating the child universe and copying the forking market.</p>
+			<h1 id="un-migratable-objects">Un-migratable objects</h1>
+			<h2 id="finalized-markets">Finalized Markets</h2>
+			<div class="center">
+				<a href="../../assets/images/version2-english/fork/migration-of-the-objects/finalized-market.svg" target="_blank">
+					<img src="../../assets/images/version2-english/fork/migration-of-the-objects/finalized-market.svg" />
+				</a>
+				<figcaption><i>Figure 6. migration of finalized markets</i></figcaption>
+			</div>
+			<p>Finalized markets and their attached objects (<a href="../../version2-english/7-glossary.html#Share">shares</a>, <a href="../../version2-english/7-glossary.html#Unfilled_Order">unfilled orders</a>, and <a href="../../version2-english/7-glossary.html#Creator_Fee">creator fee</a>) can not be migrated. However, you can still trade and <a href="../../version2-english/7-glossary.html#Settlement">settle</a> your <a href="../../version2-english/7-glossary.html#Share">shares</a> on the markets during/after a <a href="../../version2-english/7-glossary.html#Fork">fork</a>.</p>
+			<h2 id="dispute-windows">Dispute Windows</h2>
+			<div class="center">
+				<a href="../../assets/images/version2-english/fork/migration-of-the-objects/dispute-window.svg" target="_blank">
+					<img src="../../assets/images/version2-english/fork/migration-of-the-objects/dispute-window.svg" />
+				</a>
+				<figcaption><i>Figure 7. migration of dispute windows</i></figcaption>
+			</div>
+			<p><a href="../../version2-english/7-glossary.html#Dispute_Window">Dispute Windows</a> and their attached objects (<a href="../../version2-english/7-glossary.html#Reporting_Fee_Pool">reporting fee pool</a>, <a href="../../version2-english/7-glossary.html#Reporting_Fee">reporting fees</a>, <a href="../../version2-english/7-glossary.html#Validity_Bond">validity bonds</a>, <a href="../../version2-english/7-glossary.html#Creator_Fee">creator fees</a>, and <a href="../../version2-english/7-glossary.html#Participation_Token">participation tokens</a>) can not be migrated.</p>
+			<p>Before and after a <a href="../../version2-english/7-glossary.html#Fork">fork</a>, there is no change in the features of a dispute window. This means Augur collects reporting fees, validity bonds, and creator fees, and adds those to reporting fee pool during a dispute window. At the end of the dispute window, the pool is paid out to participation token owners in proportion to the amount of participation token.</p>
+			<p>In the <a href="../../version2-english/7-glossary.html#Parent_Universe">parent universe</a>, anytime you can purchase participation tokens, and redeem them. By redeeming them, the <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> that you paid to get the token return to you. Therefore, participation token owners who want to migrate their REP <strong>MUST</strong> redeem their tokens and migrate their REP within 60 days after a fork starts.</p>
+		</section>
+	</div>
+</body>
+
+<script type="text/javascript" src="../../assets/js/addAnchorLinkToHeader.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-<ul><li class="page-link">
-        <a href="../../version2-english/7-glossary.html">Glossary</a>
-        
-          
-
-          
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-          
-          
-          
-        
-      </li>
-    
-  
-    
-    
-    
-      <li class="page-link">
-        <a href="../../version2-english/8-augur-ui.html">Augur UI</a>
-        
-          
-
-          
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-          
-          
-          
-        
-      </li>
-    
-  
-    
-    
-    
-      <li class="page-link">
-        <a href="../../version2-english/9-fork.html">Fork</a>
-        
-          
-
-          
-          
-
-
-
-
-
-
-
-
-
-
-
-<ul><li class="page-link">
-        <a href="../../version2-english/9-fork/1-basic-knowledge.html">Basic knowledge</a>
-        
-      </li>
-    
-  
-    
-    
-    
-      <li class="page-link">
-        <a href="../../version2-english/9-fork/2-to-dos.html">To-do's</a>
-        
-      </li>
-    
-  
-    
-    
-    
-      <li class="page-link">
-        <a href="../../version2-english/9-fork/3-restrictions-on-use.html">Restrictions on use</a>
-        
-      </li>
-    
-  
-    
-    
-    
-      <li class="page-link">
-        <a href="../../version2-english/9-fork/4-migration-of-the-objects.html">Migration of the objects</a>
-        
-      </li></ul>
-
-
-
-          
-          
-          
-          
-        
-      </li></ul>
-
-
-        </div>
-        <br />
-      </header>
-      <section>
-
-        
-<h1 id="migratable-objects-in-augur">Migratable objects in Augur</h1>
-<p>This page covers the details of what objects in the Augur system of <a href="../../version2-english/7-glossary.html#Smart_Contract">contracts</a> are migratable between <a href="../../version2-english/7-glossary.html#Parent_Universe">parent</a> and <a href="../../version2-english/7-glossary.html#Child_Universe">child universes</a>. However <em>all</em> objects are not covered on this page, but only those that are likely to directly affect end users.</p>
-
-<h1 id="hierarchical-relationships-between-objects">Hierarchical Relationships between Objects</h1>
-<p>The objects in the <a href="../../version2-english/7-glossary.html#Universe">universe</a> form a hierarchical relationship with the universe as a top.</p>
-
-<!--div class="container">
-  <input type="checkbox" id='/assets/images/version2-english/fork/migration-of-the-objects/relationships-between-objects.svg">
-  <label for="../../assets/images/version2-english/fork/migration-of-the-objects/relationships-between-objects.svg">
-    <img src='/assets/images/version2-english/fork/migration-of-the-objects/relationships-between-objects.svg">
-  </label>
-</div-->
-
-<div class="center">
-  <a href="../../assets/images/version2-english/fork/migration-of-the-objects/relationships-between-objects.svg" target="_blank">
-    <img src="../../assets/images/version2-english/fork/migration-of-the-objects/relationships-between-objects.svg" />
-  </a>
-  <figcaption><i>Figure 1. hierarchical relationships between objects</i></figcaption>
-</div>
-
-<p>The universe has <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a>, <a href="../../version2-english/7-glossary.html#Market">Market</a>, and <a href="../../version2-english/7-glossary.html#Dispute_Window">Dispute Window</a> attached. And Market and Dispute Window have some attached objects, while REP doesn’t have any attached object. The point is that <strong>when forks occur, the lower objects migrate where their upper object migrates, and if the upper object may not migrate then their lower objects may not migrate</strong>. Of course, there are some exceptions, but this principle might help you understand the migration of the objects.</p>
-
-<h1 id="overview">Overview</h1>
-<p>The following figure shows where the objects in the <a href="../../version2-english/7-glossary.html#Parent_Universe">parent universe</a> are migrated after a fork. (Click to enlarge)</p>
-
-<!--div class="container">
-  <input type="checkbox" id='/assets/images/version2-english/fork/migration-of-the-objects/outline.svg">
-  <label for="../../assets/images/version2-english/fork/migration-of-the-objects/outline.svg">
-    <img src='/assets/images/version2-english/fork/migration-of-the-objects/outline.svg">
-  </label>
-</div-->
-
-<div class="center">
-  <a href="../../assets/images/version2-english/fork/migration-of-the-objects/outline.svg" target="_blank">
-    <img src="../../assets/images/version2-english/fork/migration-of-the-objects/outline.svg" />
-  </a>
-  <figcaption><i>Figure 2. overview of migration</i></figcaption>
-</div>
-
-<p>The red objects can only be migrated to the <a href="../../version2-english/7-glossary.html#Winning_Universe">winning universe</a>, the blues can only be migrated to the <a href="../../version2-english/7-glossary.html#Losing_Universe">losing universe</a>, the purples can be migrated to one of the <a href="../../version2-english/7-glossary.html#Child_Universe">child universes</a>, and the greens cannot be migrated to any child universe.</p>
-
-<p>Before a <a href="../../version2-english/7-glossary.html#Fork">fork</a>, all objects are in the parent universe. After a fork, in the parent universe, there are the <a href="../../version2-english/7-glossary.html#Finalized_Market">finalized markets</a>, <a href="../../version2-english/7-glossary.html#Dispute_Window">dispute windows</a>, and the objects which are attached to them. The winning universe and the losing universe are created, and the <a href="../../version2-english/7-glossary.html#Forking_Market">forking market</a>, <a href="../../version2-english/7-glossary.html#Non-Finalized_Market">non-finalized markets</a>, and <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> are migrated to them.</p>
-
-<p>This can be summarized as follows:</p>
-
-<ul>
-  <li>The migratable objects are:
-    <ul>
-      <li>Forking market</li>
-      <li>Non-Finalized Markets</li>
-      <li>REP</li>
-    </ul>
-  </li>
-  <li>The un-migratable objects are:
-    <ul>
-      <li>Finalized Markets</li>
-      <li>Dispute Windows</li>
-    </ul>
-  </li>
-  <li>The winning universe receives:
-    <ul>
-      <li>Forking market and its attached objects</li>
-      <li>Non-Finalized markets</li>
-      <li>REP</li>
-    </ul>
-  </li>
-  <li>The losing universe receives:
-    <ul>
-      <li>Forking market</li>
-      <li>REP</li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="child-universe-is-created-by-rep-holders">Child universe is created by REP holders</h1>
-<p>A <a href="../../version2-english/7-glossary.html#Child_Universe">child universe</a> is created when the <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> holder who <em>first</em> migrates their REP to it. Even if the <a href="../../version2-english/7-glossary.html#Forking_Market">forking market</a> has <a href="../../version2-english/7-glossary.html#Finalized_Market">finalized</a> or the <a href="../../version2-english/7-glossary.html#Forking_Period">forking period</a> ends, the <a href="../../version2-english/7-glossary.html#Child_Universe">child universe</a> is not created without migrating REP. And the REP holder who <em>first</em> migrates their REP has to pay not only the <a href="../../version2-english/7-glossary.html#Transaction_Fee">transaction fee</a> of migrating their REP, but also the transaction fee of creating the child universe.</p>
-
-<h1 id="migration-of-forking-market">Migration of Forking Market</h1>
-
-<!--div class="container">
-  <input type="checkbox" id='/assets/images/version2-english/fork/migration-of-the-objects/forking-market.svg">
-  <label for="../../assets/images/version2-english/fork/migration-of-the-objects/forking-market.svg">
-    <img src='/assets/images/version2-english/fork/migration-of-the-objects/forking-market.svg">
-  </label>
-</div-->
-
-<div class="center">
-  <a href="../../assets/images/version2-english/fork/migration-of-the-objects/forking-market.svg" target="_blank">
-    <img src="../../assets/images/version2-english/fork/migration-of-the-objects/forking-market.svg" />
-  </a>
-  <figcaption><i>Figure 3. migration of forking market</i></figcaption>
-</div>
-
-<h2 id="market-itself">Market Itself</h2>
-<p>The <a href="../../version2-english/7-glossary.html#Forking_Market">forking market</a> is duplicated in each <a href="../../version2-english/7-glossary.html#Child_Universe">child universe</a>. In a child universe, the forking market is <a href="../../version2-english/7-glossary.html#Finalized_Market">finalized</a> as the <a href="../../version2-english/7-glossary.html#Outcome">outcome</a> that aligns with that particular child universe. (See <a href="../../version2-english/9-fork/1-basic-knowledge.html#what-happens-when-a-fork-starts">basic knowledge</a> for details on how child universes are created.)</p>
-
-<p>This duplication occurs when the child universe is created.  This happens when the <em>first</em> <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> holder migrates their REP to that child universe.</p>
-
-<h2 id="staked-rep">Staked REP</h2>
-<p>The staked <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> on any <a href="../../version2-english/7-glossary.html#Outcome">outcome</a> of the <a href="../../version2-english/7-glossary.html#Forking_Market">forking market</a> is migrated to the <a href="../../version2-english/7-glossary.html#Child_Universe">child universe</a> corresponding to the staked outcome.</p>
-
-<p>That REP will be unstaked and refunded to their owners in a child universe when the migration has done. They will also receive a 40% <a href="../../version2-english/7-glossary.html#ROI">ROI</a> in additional REP minted in the universe they staked on prior to the fork.</p>
-
-<h2 id="attached-objects">Attached Objects</h2>
-<p>The objects which are attached to the <a href="../../version2-english/7-glossary.html#Forking_Market">forking market</a> are:</p>
-<ul>
-  <li><a href="../../version2-english/7-glossary.html#Share">share</a></li>
-  <li><a href="../../version2-english/7-glossary.html#Unfilled_Order">unfilled order</a></li>
-  <li><a href="../../version2-english/7-glossary.html#Creator_Fee">creator fee</a></li>
-  <li><a href="../../version2-english/7-glossary.html#Validity_Bond">validity bond</a></li>
-</ul>
-
-<p>When the for is <a href="../../version2-english/7-glossary.html#Finalized_Market">finalized</a>, those objects are migrated to the <a href="../../version2-english/7-glossary.html#Winning_Universe">winning universe</a> by the Augur contracts automatically.</p>
-
-<p>Regarding <a href="../../version2-english/7-glossary.html#Validity_Bond">validity bond</a>, which is paid by the <a href="../../version2-english/7-glossary.html#Market_Creator">market creator</a> when creating the <a href="../../version2-english/7-glossary.html#Market">market</a>, if the corresponding outcome of the winning universe is <code class="language-plaintext highlighter-rouge">Invalid</code>, this bond is paid out to <a href="../../version2-english/7-glossary.html#Participation_Token">participation token</a> holders in proportion to the amount of participation token in the winning universe. If not <code class="language-plaintext highlighter-rouge">Invalid</code>, this bond is returned to the market creator in the winning universe.</p>
-
-<p>As to <a href="../../version2-english/7-glossary.html#Creation_Bond">creation bond</a>, which is also paid by the market creator, no longer exists at the time of forking. Since this bond is already used by the <a href="../../version2-english/7-glossary.html#Designated_Reporter">designated reporter</a> or the first public reporter as the <a href="../../version2-english/7-glossary.html#Initial_Reporter">initial reporter</a>’s stake after the market’s <a href="../../version2-english/7-glossary.html#End_Time">event end time</a>.</p>
-
-<h1 id="migration-of-non-forking-markets-not-finalized">Migration of Non-Forking Markets (not finalized)</h1>
-
-<!--div class="container">
-  <input type="checkbox" id='/assets/images/version2-english/fork/migration-of-the-objects/non-forking-market.svg">
-  <label for="../../assets/images/version2-english/fork/migration-of-the-objects/non-forking-market.svg">
-    <img src='/assets/images/version2-english/fork/migration-of-the-objects/non-forking-market.svg">
-  </label>
-</div-->
-
-<div class="center">
-  <a href="../../assets/images/version2-english/fork/migration-of-the-objects/non-forking-market.svg" target="_blank">
-    <img src="../../assets/images/version2-english/fork/migration-of-the-objects/non-forking-market.svg" />
-  </a>
-  <figcaption><i>Figure 4. migration of non-forking markets (not finalized)</i></figcaption>
-</div>
-<h2 id="market-itself-1">Market Itself</h2>
-<p>The non-forking markets which are not <a href="../../version2-english/7-glossary.html#Finalized_Market">finalized</a> can be migrated only to the <a href="../../version2-english/7-glossary.html#Winning_Universe">winning universe</a>. To migrate those markets, you need to make a transaction for that explicitly. It can be done by anyone, not just the <a href="../../version2-english/7-glossary.html#Market_Creator">market creator</a>, and anytime after finalizing the <a href="../../version2-english/7-glossary.html#Forking_Market">forking market</a>. It is one-way and cannot be reversed.</p>
-
-<p>When you migrate a market, you need to supply <a href="../../version2-english/7-glossary.html#Creation_Bond">creation bond</a> (which is normally paid by the market creator when creating the market) and you become the <a href="../../version2-english/7-glossary.html#Initial_Reporter">initial reporter</a> of the market in the <a href="../../version2-english/7-glossary.html#Winning_Universe">winning universe</a>. And if the market is past its <a href="../../version2-english/7-glossary.html#End_Time">event end time</a> in the <a href="../../version2-english/7-glossary.html#Parent_Universe">parent universe</a>, the market is reset back to needing an <a href="../../version2-english/7-glossary.html#Initial_Report">initial reporting</a>, and you need to submit the initial report for the market. At this time, the creation bond that you supplied when you migrate a market is used as the initial reporter’s stake.</p>
-
-<p>The reason for this is that all of the <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> locked in the non-forking markets in the parent universe is refunded to its respective owners when a <a href="../../version2-english/7-glossary.html#Fork">fork</a> starts (so that they migrate their REP to a <a href="../../version2-english/7-glossary.html#Child_Universe">child universe</a> during the <a href="../../version2-english/7-glossary.html#Forking_Period">forking period</a>), the first reporter must cover the first report REP costs themselves.</p>
-
-<p>The migration of the non-forking markets is not mandatory. Even if a fork ends, you can still trade and <a href="../../version2-english/7-glossary.html#Settlement">settle</a> your <a href="../../version2-english/7-glossary.html#Share">shares</a> on the markets in the parent universe (See <a href="../../version2-english/9-fork/3-restrictions-on-use.html">restrictons on use</a> for details). However, after a fork starts, markets in the parent universe cannot be <a href="../../version2-english/7-glossary.html#Finalized_Market">finalized</a>. For the market to be finalized, you need to migrate it to the winning universe.</p>
-
-<p>The migration of the non-forking markets can be done by anyone who wants to, but especially the <a href="../../version2-english/7-glossary.html#Market_Creator">market creator</a> and the traders who have <a href="../../version2-english/7-glossary.html#Share">shares</a> in the market may want to do. Since for the market creator to receive the creator fees and for the traders to claim a payout of their shares, the market needs to be finalized (However creator fees are forfeit in <a href="../../version2-english/7-glossary.html#Invalid_Outcome">invalid</a> markets). It might give them an incentive to migrate markets.</p>
-
-<h2 id="staked-rep-1">Staked REP</h2>
-<p>When a <a href="../../version2-english/7-glossary.html#Fork">fork</a> starts, all staked <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> on the non-forking markets are un-staked and refunded to REP holders who staked it so that they migrate their REP during the <a href="../../version2-english/7-glossary.html#Forking_Period">forking period</a>.</p>
-
-<h2 id="attached-objects-1">Attached Objects</h2>
-<p>The objects which are attached to the non-forking market are:</p>
-<ul>
-  <li><a href="../../version2-english/7-glossary.html#Share">share</a></li>
-  <li><a href="../../version2-english/7-glossary.html#Unfilled_Order">unfilled order</a></li>
-  <li><a href="../../version2-english/7-glossary.html#Creator_Fee">creator fee</a></li>
-  <li><a href="../../version2-english/7-glossary.html#Validity_Bond">validity bond</a></li>
-</ul>
-
-<p>Those objects go where the market goes, they cannot be migrated separately.</p>
-
-<p><a href="../../version2-english/7-glossary.html#Creation_Bond">Creation bond</a>, which is paid by the <a href="../../version2-english/7-glossary.html#Market_Creator">market creator</a> when creating the market in the <a href="../../version2-english/7-glossary.html#Parent_Universe">parent universe</a>, is refunded to either the market creator or the <a href="../../version2-english/7-glossary.html#Initial_Reporter">initial reporter</a>. At the time of starting a <a href="../../version2-english/7-glossary.html#Fork">fork</a>, if the market has not received an <a href="../../version2-english/7-glossary.html#Initial_Report">initial reporting</a>, this bond is refunded to the market creator. If it already has received the initial report, then it refunds the <a href="../../version2-english/7-glossary.html#Initial_Report">initial reporter</a>. Because “received the initial reporting” means that the creation bond is already used by the initial reporter as the initial reporter’s stake.</p>
-
-<h1 id="migration-of-rep-in-wallet">Migration of REP in Wallet</h1>
-
-<!--div class="container">
-  <input type="checkbox" id='/assets/images/version2-english/fork/migration-of-the-objects/rep-in-wallet.svg">
-  <label for="../../assets/images/version2-english/fork/migration-of-the-objects/rep-in-wallet.svg">
-    <img src='/assets/images/version2-english/fork/migration-of-the-objects/rep-in-wallet.svg">
-  </label>
-</div-->
-
-<div class="center">
-  <a href="../../assets/images/version2-english/fork/migration-of-the-objects/rep-in-wallet.svg" target="_blank">
-    <img src="../../assets/images/version2-english/fork/migration-of-the-objects/rep-in-wallet.svg" />
-  </a>
-  <figcaption><i>Figure 5. migration of REP in wallet</i></figcaption>
-</div>
-
-<p>All <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> in the <a href="../../version2-english/7-glossary.html#Parent_Universe">parent universe</a> that are <em>not</em> staked on any <a href="../../version2-english/7-glossary.html#Outcome">outcome</a> of the <a href="../../version2-english/7-glossary.html#Forking_Market">forking market</a> can be migrated to one of the <a href="../../version2-english/7-glossary.html#Child_Universe">child universes</a> by their owner. The migration of REP must be done during the <a href="../../version2-english/7-glossary.html#Forking_Period">forking period</a> which lasts 60 days after the <a href="../../version2-english/7-glossary.html#Fork">fork</a> starts. After the forking period, the REP in the parent universe can never be migrated to any child universe (See <a href="../../version2-english/9-fork/2-to-dos.html">to-do’s</a> for details).</p>
-
-<p>If you are the first person to migrate REP to a <a href="../../version2-english/7-glossary.html#Child_Universe">child universe</a>, child universe creation is triggered and the forking market is also copied into it. In this case, you have to pay the <a href="../../version2-english/7-glossary.html#Transaction_Fee">transaction fee</a> not only for migrating your REP but also for creating the child universe and copying the forking market.</p>
-
-<h1 id="un-migratable-objects">Un-migratable objects</h1>
-<h2 id="finalized-markets">Finalized Markets</h2>
-
-<!--div class="container">
-  <input type="checkbox" id='/assets/images/version2-english/fork/migration-of-the-objects/finalized-market.svg">
-  <label for="../../assets/images/version2-english/fork/migration-of-the-objects/finalized-market.svg">
-    <img src='/assets/images/version2-english/fork/migration-of-the-objects/finalized-market.svg">
-  </label>
-</div-->
-
-<div class="center">
-  <a href="../../assets/images/version2-english/fork/migration-of-the-objects/finalized-market.svg" target="_blank">
-    <img src="../../assets/images/version2-english/fork/migration-of-the-objects/finalized-market.svg" />
-  </a>
-  <figcaption><i>Figure 6. migration of finalized markets</i></figcaption>
-</div>
-<p>Finalized markets and their attached objects (<a href="../../version2-english/7-glossary.html#Share">shares</a>, <a href="../../version2-english/7-glossary.html#Unfilled_Order">unfilled orders</a>, and <a href="../../version2-english/7-glossary.html#Creator_Fee">creator fee</a>) can not be migrated. However, you can still trade and <a href="../../version2-english/7-glossary.html#Settlement">settle</a> your <a href="../../version2-english/7-glossary.html#Share">shares</a> on the markets during/after a <a href="../../version2-english/7-glossary.html#Fork">fork</a>.</p>
-
-<h2 id="dispute-windows">Dispute Windows</h2>
-
-<!--div class="container">
-  <input type="checkbox" id='/assets/images/version2-english/fork/migration-of-the-objects/dispute-window.svg">
-  <label for="../../assets/images/version2-english/fork/migration-of-the-objects/dispute-window.svg">
-    <img src='/assets/images/version2-english/fork/migration-of-the-objects/dispute-window.svg">
-  </label>
-</div-->
-
-<div class="center">
-  <a href="../../assets/images/version2-english/fork/migration-of-the-objects/dispute-window.svg" target="_blank">
-    <img src="../../assets/images/version2-english/fork/migration-of-the-objects/dispute-window.svg" />
-  </a>
-  <figcaption><i>Figure 7. migration of dispute windows</i></figcaption>
-</div>
-
-<p><a href="../../version2-english/7-glossary.html#Dispute_Window">Dispute Windows</a> and their attached objects (<a href="../../version2-english/7-glossary.html#Reporting_Fee_Pool">reporting fee pool</a>, <a href="../../version2-english/7-glossary.html#Reporting_Fee">reporting fees</a>, <a href="../../version2-english/7-glossary.html#Validity_Bond">validity bonds</a>, <a href="../../version2-english/7-glossary.html#Creator_Fee">creator fees</a>, and <a href="../../version2-english/7-glossary.html#Participation_Token">participation tokens</a>) can not be migrated.</p>
-
-<p>Before and after a <a href="../../version2-english/7-glossary.html#Fork">fork</a>, there is no change in the features of a dispute window. This means Augur collects reporting fees, validity bonds, and creator fees, and adds those to reporting fee pool during a dispute window. At the end of the dispute window, the pool is paid out to participation token owners in proportion to the amount of participation token.</p>
-
-<p>In the <a href="../../version2-english/7-glossary.html#Parent_Universe">parent universe</a>, anytime you can purchase participation tokens, and redeem them. By redeeming them, the <a href="../../version2-english/7-glossary.html#Reputation_Token">REP</a> that you paid to get the token return to you. Therefore, participation token owners who want to migrate their REP <strong>MUST</strong> redeem their tokens and migrate their REP within 60 days after a fork starts.</p>
-      </section>
-    </div>
-  </body>
-  <script type="text/javascript" src="../../assets/js/addAnchorLinkToHeader.js"></script>
-  <script>
-
-
-  </script>
 </html>
