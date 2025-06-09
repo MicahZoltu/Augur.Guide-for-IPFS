@@ -1,10 +1,2 @@
-# Bundler
-vendor/
-.bundle/config.*
-.bundle/cache
-.bundle/cache.*
-
-# Jekyll
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+.devcontainer/
+.vscode/
