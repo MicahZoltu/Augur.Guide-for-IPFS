@@ -29,7 +29,7 @@ server.on('request', async (request, response) => {
 	}
 })
 
-// Initiate the server on Port 3000 and returning a message
+// Initiate the server on Port 15243 and returning a message
 const port = 15243
 server.listen(port)
 console.log(`Web Server listening on port ${port}...`)
